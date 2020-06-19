@@ -1,0 +1,11 @@
+[package]
+name = "wasm-security-analysis"
+version = "0.1.0"
+authors = ["Daniel Lehmann <mail@dlehmann.eu>"]
+edition = "2018"
+
+[dependencies]
+wasm = { git = "https://github.com/danleh/wasabi" }
+
+[profile.release]
+lto = true
