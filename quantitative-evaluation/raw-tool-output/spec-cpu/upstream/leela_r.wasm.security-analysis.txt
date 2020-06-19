@@ -1,0 +1,1015 @@
+filename: ./541.leela_r/leela_r.wasm
+  benchmark: 541.leela_r
+  binary:    leela_r.wasm
+
+Functions:      1101
+  Imported:       53
+  Non-imported: 1048
+  Exported:       34
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:       746
+  Of those, unique functions:  600 (i.e., at least 54.50% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:    118808
+  call:            4981 (4.19% of all instructions)
+  call_indirect:    263 (0.22% of all, 5.02% of all calls)
+
+Globals:
+  #0 i32
+     init: i32.const 5304240
+     351 × global.get   701 × global.set  1052 total (33/67% split)
+
+Likely the stack pointer:       Global #0
+Functions using stack pointer:  329 (31.39% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.10%) × [-16912]
+    1  (0.10%) × [-8960]
+    1  (0.10%) × [-8560]
+    1  (0.10%) × [-8544]
+    1  (0.10%) × [-8512]
+    1  (0.10%) × [-8064]
+    1  (0.10%) × [-1072]
+    1  (0.10%) × [-624]
+    1  (0.10%) × [-496]
+    1  (0.10%) × [-464]
+    1  (0.10%) × [-448]
+    1  (0.10%) × [-416]
+    1  (0.10%) × [-304]
+    1  (0.10%) × [-224]
+    1  (0.10%) × [-112]
+    2  (0.19%) × [-8400]
+    2  (0.19%) × [-1040]
+    2  (0.19%) × [-432]
+    2  (0.19%) × [-384]
+    2  (0.19%) × [-368]
+    2  (0.19%) × [-288]
+    2  (0.19%) × [-256]
+    2  (0.19%) × [-96]
+    2  (0.19%) × [-32, -16]
+    2  (0.19%) × [-32, -16, -16]
+    3  (0.29%) × [-8496]
+    3  (0.29%) × [-560]
+    3  (0.29%) × [-208]
+    3  (0.29%) × [-192]
+    3  (0.29%) × [-80]
+    3  (0.29%) × [-16, -16, -16]
+    4  (0.38%) × [-160]
+    5  (0.48%) × [-144]
+    5  (0.48%) × [-128]
+    7  (0.67%) × [-352]
+    7  (0.67%) × [-64]
+   10  (0.95%) × [-48]
+   11  (1.05%) × [-272]
+   11  (1.05%) × [-16, -16]
+   37  (3.53%) × [-32]
+  169 (16.13%) × [-16]
+  729 (69.56%) × []
+  functions with stack allocation total: 319 (30.44%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-16912]",-16912,16912
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-8960]",-8960,8960
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-8560]",-8560,8560
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-8544]",-8544,8544
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-8512]",-8512,8512
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-8064]",-8064,8064
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-1072]",-1072,1072
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-624]",-624,624
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-496]",-496,496
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-464]",-464,464
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-448]",-448,448
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-416]",-416,416
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-304]",-304,304
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-224]",-224,224
+sp_csv_line:"541.leela_r","leela_r.wasm",1,0.09541985,"[-112]",-112,112
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-8400]",-8400,8400
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-1040]",-1040,1040
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-432]",-432,432
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-384]",-384,384
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-368]",-368,368
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-288]",-288,288
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-256]",-256,256
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-96]",-96,96
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-32, -16]",-48,48
+sp_csv_line:"541.leela_r","leela_r.wasm",2,0.1908397,"[-32, -16, -16]",-64,64
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-8496]",-8496,8496
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-560]",-560,560
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-208]",-208,208
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-192]",-192,192
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-80]",-80,80
+sp_csv_line:"541.leela_r","leela_r.wasm",3,0.28625953,"[-16, -16, -16]",-48,48
+sp_csv_line:"541.leela_r","leela_r.wasm",4,0.3816794,"[-160]",-160,160
+sp_csv_line:"541.leela_r","leela_r.wasm",5,0.47709924,"[-144]",-144,144
+sp_csv_line:"541.leela_r","leela_r.wasm",5,0.47709924,"[-128]",-128,128
+sp_csv_line:"541.leela_r","leela_r.wasm",7,0.66793895,"[-352]",-352,352
+sp_csv_line:"541.leela_r","leela_r.wasm",7,0.66793895,"[-64]",-64,64
+sp_csv_line:"541.leela_r","leela_r.wasm",10,0.9541985,"[-48]",-48,48
+sp_csv_line:"541.leela_r","leela_r.wasm",11,1.0496184,"[-272]",-272,272
+sp_csv_line:"541.leela_r","leela_r.wasm",11,1.0496184,"[-16, -16]",-32,32
+sp_csv_line:"541.leela_r","leela_r.wasm",37,3.5305343,"[-32]",-32,32
+sp_csv_line:"541.leela_r","leela_r.wasm",169,16.125954,"[-16]",-16,16
+sp_csv_line:"541.leela_r","leela_r.wasm",729,69.561066,"[]",0,0
+
+Counts of function types (65 unique types):
+    1  (0.09%) × [i32] -> [f64]
+    1  (0.09%) × [i32, i32] -> [i64]
+    1  (0.09%) × [i32, i32] -> [f32]
+    1  (0.09%) × [i32, i32] -> [f64]
+    1  (0.09%) × [i32, i32, i32] -> [f32]
+    1  (0.09%) × [i32, i32, i32] -> [f64]
+    1  (0.09%) × [i32, i32, i32, i32, i32] -> [i64]
+    1  (0.09%) × [i32, i32, i64] -> []
+    1  (0.09%) × [i32, i64] -> []
+    1  (0.09%) × [i32, i64, i64] -> []
+    1  (0.09%) × [i32, f32] -> []
+    1  (0.09%) × [i32, f64] -> []
+    1  (0.09%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    1  (0.09%) × [i64, i32, i32] -> [i32]
+    1  (0.09%) × [i64, i64] -> [f32]
+    1  (0.09%) × [i64, i64] -> [f64]
+    1  (0.09%) × [i64, i64, i64, i64] -> [i32]
+    1  (0.09%) × [f64, i32] -> [f64]
+    2  (0.18%) × [i32] -> [f32]
+    2  (0.18%) × [i32, i32, i32, i32] -> [f32]
+    2  (0.18%) × [i32, i32, i32, i32] -> [f64]
+    2  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    2  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    2  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    2  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    2  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    2  (0.18%) × [i32, i32, i32, i32, i32, i64, i64] -> [i32]
+    2  (0.18%) × [i32, i32, i32, i32, i64, i64] -> [i32]
+    2  (0.18%) × [i32, i32, i32, i32, f64] -> [i32]
+    2  (0.18%) × [i32, i32, i32, i64] -> [i64]
+    2  (0.18%) × [i32, i32, i32, f32] -> []
+    2  (0.18%) × [i32, i32, f32] -> []
+    2  (0.18%) × [i32, i32, f32] -> [f32]
+    2  (0.18%) × [i32, i64, i32] -> []
+    2  (0.18%) × [i32, i64, i32] -> [i32]
+    2  (0.18%) × [i32, i64, i32] -> [i64]
+    2  (0.18%) × [i32, f32] -> [f32]
+    2  (0.18%) × [i64, i32] -> [i32]
+    2  (0.18%) × [i64, i64] -> [i32]
+    3  (0.27%) × [i32] -> [i64]
+    3  (0.27%) × [i32, i32, i64, i32, i32] -> []
+    3  (0.27%) × [i32, i64, i64, i32] -> []
+    4  (0.36%) × [i32, i32, i32, i32] -> [i64]
+    4  (0.36%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    4  (0.36%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    4  (0.36%) × [i32, i32, i32, i32, i64] -> [i32]
+    5  (0.45%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    6  (0.54%) × [i32, i32, i32, i32, i32, i32, i32] -> []
+    6  (0.54%) × [i32, i64, i64, i64, i64] -> []
+   10  (0.91%) × [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+   13  (1.18%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+   17  (1.54%) × [i32, i32, i32, i32, i32, i32] -> []
+   25  (2.27%) × [] -> [i32]
+   30  (2.72%) × [i32, i32, i32, i32] -> []
+   32  (2.91%) × [i32, i32, i32, i32] -> [i32]
+   35  (3.18%) × [i32, i32, i32, i32, i32] -> []
+   46  (4.18%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+   48  (4.36%) × [] -> []
+   53  (4.81%) × [i32, i32, i32, i32, i32] -> [i32]
+   62  (5.63%) × [i32, i32, i32] -> []
+   97  (8.81%) × [i32, i32, i32] -> [i32]
+  103  (9.36%) × [i32] -> []
+  121 (10.99%) × [i32, i32] -> [i32]
+  134 (12.17%) × [i32, i32] -> []
+  173 (15.71%) × [i32] -> [i32]
+
+Functions with at least one call_indirect: 146 (13.93% of all functions)
+
+Table elements initialization:
+         range: [    1,    1]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [    2,    2]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    3,    3]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [    4,    4]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    5,    5]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [    6,    6]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    7,    7]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [    8,    9]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   10,   10]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   11,   12]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [   13,   13]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   14,   14]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   15,   15]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [   16,   17]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   18,   19]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [   20,   20]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   21,   21]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [   22,   22]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   23,   23]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   24,   24]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   25,   25]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   26,   26]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   27,   27]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   28,   29]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   30,   30]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   31,   31]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [   32,   32]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   33,   33]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   34,   34]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   35,   35]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   36,   36]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   37,   37]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   38,   38]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   39,   39]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   40,   40]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   41,   41]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   42,   42]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   43,   43]   length:   1   unique funcs:    1   type: [i32, i32, i64, i32, i32] -> []
+         range: [   44,   44]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [   45,   46]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [   47,   47]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   48,   49]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   50,   50]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   51,   51]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   52,   52]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   53,   53]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   54,   54]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   55,   55]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   56,   56]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   57,   57]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   58,   58]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   59,   60]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [   61,   61]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   62,   62]   length:   1   unique funcs:    1   type: [] -> [i32]
+         range: [   63,   64]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   65,   66]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> []
+         range: [   67,   67]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   68,   68]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [   69,   69]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   70,   70]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   71,   71]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   72,   72]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   73,   75]   length:   3   unique funcs:    3   type: [i32] -> [i32]
+         range: [   76,   76]   length:   1   unique funcs:    1   type: [] -> []
+         range: [   77,   77]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   78,   78]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [   79,   79]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [   80,   80]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   81,   81]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   82,   82]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [   83,   83]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [   84,   84]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   85,   85]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   86,   86]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   87,   87]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   88,   88]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   89,   90]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [   91,   91]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   92,   92]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   93,   93]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   94,   94]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   95,   95]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   96,   96]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [   97,   98]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [   99,   99]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  100,  100]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  101,  101]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  102,  103]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  104,  104]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  105,  105]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  106,  107]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  108,  108]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  109,  109]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  110,  110]   length:   1   unique funcs:    1   type: [i32, i32, i64, i32, i32] -> []
+         range: [  111,  111]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  112,  112]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  113,  114]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  115,  115]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  116,  117]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  118,  118]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  119,  119]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  120,  120]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  121,  121]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  122,  122]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  123,  123]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  124,  124]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  125,  125]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  126,  126]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  127,  127]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  128,  129]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+         range: [  130,  130]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  131,  131]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  132,  132]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  133,  133]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  134,  134]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  135,  137]   length:   3   unique funcs:    3   type: [i32, i32] -> [i32]
+         range: [  138,  138]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  139,  139]   length:   1   unique funcs:    1   type: [i32, i32, f32] -> []
+         range: [  140,  140]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  141,  141]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  142,  143]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  144,  144]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  145,  145]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  146,  146]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  147,  147]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  148,  148]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  149,  149]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  150,  150]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  151,  151]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  152,  152]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  153,  153]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  154,  155]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  156,  157]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+         range: [  158,  158]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  159,  159]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  160,  160]   length:   1   unique funcs:    1   type: [i32, f32] -> [f32]
+         range: [  161,  161]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  162,  162]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  163,  163]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  164,  164]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  165,  165]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  166,  166]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  167,  167]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  168,  168]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  169,  169]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  170,  170]   length:   1   unique funcs:    1   type: [i32] -> [f32]
+         range: [  171,  171]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  172,  172]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  173,  173]   length:   1   unique funcs:    1   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [  174,  174]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  175,  175]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  176,  176]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  177,  178]   length:   2   unique funcs:    2   type: [i32, i64, i32] -> [i64]
+         range: [  179,  179]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  180,  180]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  181,  181]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  182,  182]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  183,  185]   length:   3   unique funcs:    3   type: [i32] -> [i32]
+         range: [  186,  186]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  187,  188]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  189,  190]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  191,  191]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  192,  193]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  194,  194]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  195,  195]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  196,  196]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  197,  197]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  198,  198]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  199,  199]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  200,  201]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  202,  202]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  203,  203]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  204,  205]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  206,  206]   length:   1   unique funcs:    1   type: [i32, i32, i64, i32, i32] -> []
+         range: [  207,  207]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  208,  208]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  209,  210]   length:   2   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  211,  211]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  212,  212]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  213,  213]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  214,  214]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  215,  215]   length:   1   unique funcs:    1   type: [i32, i32, i64, i32, i32] -> []
+         range: [  216,  216]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  217,  218]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  219,  219]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  220,  221]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  222,  222]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  223,  223]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  224,  224]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  225,  225]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  226,  226]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  227,  227]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  228,  228]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  229,  229]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  230,  230]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  231,  231]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  232,  232]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  233,  233]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  234,  234]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  235,  235]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  236,  236]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  237,  238]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  239,  239]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  240,  240]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  241,  242]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  243,  244]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  245,  245]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  246,  247]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  248,  248]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  249,  250]   length:   2   unique funcs:    1   type: [i32, i32] -> []
+         range: [  251,  252]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  253,  253]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  254,  254]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  255,  256]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  257,  257]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  258,  258]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  259,  259]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  260,  261]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  262,  262]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  263,  263]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  264,  264]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  265,  265]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  266,  266]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  267,  267]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  268,  268]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  269,  269]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  270,  270]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  271,  271]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  272,  272]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  273,  274]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  275,  275]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  276,  277]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+         range: [  278,  278]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  279,  279]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  280,  280]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  281,  282]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  283,  283]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  284,  284]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  285,  285]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  286,  286]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  287,  287]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  288,  288]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  289,  289]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  290,  290]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  291,  291]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  292,  292]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  293,  293]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  294,  294]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i64]
+         range: [  295,  297]   length:   3   unique funcs:    2   type: [i32, i32, i32, i32] -> [i32]
+         range: [  298,  298]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i64]
+         range: [  299,  299]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  300,  300]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [f32]
+         range: [  301,  301]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  302,  302]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  303,  303]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [f64]
+         range: [  304,  304]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  305,  305]   length:   1   unique funcs:    1   type: [] -> [i32]
+         range: [  306,  306]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  307,  307]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  308,  310]   length:   3   unique funcs:    3   type: [i32] -> [i32]
+         range: [  311,  312]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+         range: [  313,  313]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  314,  315]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  316,  316]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  317,  317]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  318,  318]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  319,  319]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  320,  320]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  321,  321]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  322,  322]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  323,  323]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  324,  324]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  325,  325]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  326,  326]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  327,  327]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  328,  328]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  329,  330]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  331,  333]   length:   3   unique funcs:    3   type: [i32, i32] -> [i32]
+         range: [  334,  334]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  335,  335]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  336,  336]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  337,  337]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  338,  338]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  339,  339]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  340,  340]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  341,  341]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  342,  342]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  343,  344]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  345,  345]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  346,  346]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  347,  347]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  348,  348]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  349,  349]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  350,  350]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  351,  352]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> []
+         range: [  353,  354]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  355,  355]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  356,  356]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  357,  357]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  358,  358]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  359,  359]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  360,  360]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  361,  361]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  362,  363]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  364,  364]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  365,  365]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  366,  366]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  367,  367]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         range: [  368,  368]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  369,  371]   length:   3   unique funcs:    2   type: [i32, i32, i32, i32] -> [i32]
+         range: [  372,  372]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  373,  373]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  374,  375]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  376,  376]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  377,  377]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  378,  379]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  380,  382]   length:   3   unique funcs:    3   type: [i32, i32] -> []
+         range: [  383,  383]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  384,  384]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  385,  385]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  386,  386]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  387,  387]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  388,  388]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  389,  389]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  390,  390]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  391,  391]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  392,  398]   length:   7   unique funcs:    7   type: [i32, i32] -> []
+         range: [  399,  399]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  400,  400]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  401,  401]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  402,  402]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  403,  403]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  404,  404]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  405,  405]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  406,  406]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  407,  407]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  408,  408]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  409,  409]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  410,  410]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  411,  411]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  412,  412]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  413,  413]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  414,  416]   length:   3   unique funcs:    3   type: [i32, i32] -> []
+         range: [  417,  417]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  418,  418]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  419,  419]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  420,  420]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  421,  421]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  422,  422]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  423,  423]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  424,  426]   length:   3   unique funcs:    3   type: [i32, i32] -> []
+         range: [  427,  427]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  428,  428]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  429,  429]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  430,  430]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  431,  431]   length:   1   unique funcs:    1   type: [] -> [i32]
+         range: [  432,  433]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+         range: [  434,  435]   length:   2   unique funcs:    2   type: [] -> [i32]
+         range: [  436,  436]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  437,  439]   length:   3   unique funcs:    3   type: [] -> [i32]
+         range: [  440,  440]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  441,  441]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  442,  442]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  443,  444]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32] -> [i32]
+         range: [  445,  445]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  446,  446]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  447,  447]   length:   1   unique funcs:    1   type: [] -> [i32]
+         range: [  448,  448]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  449,  449]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  450,  450]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  451,  451]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  452,  452]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  453,  453]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  454,  454]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  455,  455]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  456,  456]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  457,  457]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  458,  458]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  459,  459]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  460,  461]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  462,  462]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  463,  469]   length:   7   unique funcs:    7   type: [i32] -> []
+         range: [  470,  470]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  471,  471]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  472,  472]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  473,  473]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  474,  474]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  475,  476]   length:   2   unique funcs:    2   type: [i32] -> []
+         range: [  477,  477]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  478,  478]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  479,  479]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  480,  480]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  481,  481]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  482,  482]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  483,  483]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  484,  484]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  485,  485]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  486,  486]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  487,  487]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  488,  488]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  489,  490]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  491,  491]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  492,  493]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  494,  494]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  495,  496]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  497,  497]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  498,  499]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  500,  502]   length:   3   unique funcs:    3   type: [i32, i32] -> []
+         range: [  503,  503]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  504,  504]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  505,  506]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  507,  509]   length:   3   unique funcs:    3   type: [i32, i32] -> []
+         range: [  510,  510]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  511,  512]   length:   2   unique funcs:    1   type: [i32] -> []
+         range: [  513,  513]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  514,  516]   length:   3   unique funcs:    3   type: [i32, i32, i32, i32] -> [i32]
+         range: [  517,  517]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  518,  518]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  519,  519]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  520,  520]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  521,  521]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  522,  522]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> [i32]
+         range: [  523,  523]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  524,  524]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  525,  525]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  526,  527]   length:   2   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  528,  528]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  529,  530]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  531,  531]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  532,  532]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  533,  533]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  534,  535]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  536,  536]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  537,  538]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  539,  539]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  540,  540]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  541,  541]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  542,  543]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  544,  544]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  545,  546]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  547,  547]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  548,  548]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  549,  550]   length:   2   unique funcs:    1   type: [i32] -> []
+         range: [  551,  551]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  552,  552]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  553,  553]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  554,  554]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  555,  555]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  556,  556]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  557,  557]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  558,  558]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  559,  559]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  560,  560]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  561,  561]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  562,  572]   length:  11   unique funcs:   11   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  573,  573]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  574,  584]   length:  11   unique funcs:   11   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  585,  585]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  586,  587]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  588,  588]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64] -> [i32]
+         range: [  589,  589]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  590,  590]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64] -> [i32]
+         range: [  591,  591]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, f64] -> [i32]
+         range: [  592,  592]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64, i64] -> [i32]
+         range: [  593,  593]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  594,  594]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  595,  596]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  597,  597]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64] -> [i32]
+         range: [  598,  598]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  599,  599]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64] -> [i32]
+         range: [  600,  600]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, f64] -> [i32]
+         range: [  601,  601]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i64, i64] -> [i32]
+         range: [  602,  602]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [  603,  603]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  604,  604]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  605,  605]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  606,  610]   length:   5   unique funcs:    5   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  611,  611]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  612,  619]   length:   8   unique funcs:    8   type: [i32] -> [i32]
+         range: [  620,  620]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  621,  621]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  622,  626]   length:   5   unique funcs:    5   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  627,  627]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  628,  635]   length:   8   unique funcs:    8   type: [i32] -> [i32]
+         range: [  636,  636]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  637,  637]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  638,  638]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  639,  639]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  640,  640]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  641,  641]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  642,  643]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  644,  647]   length:   4   unique funcs:    2   type: [i32, i32] -> []
+         range: [  648,  648]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  649,  650]   length:   2   unique funcs:    1   type: [i32, i32] -> []
+         range: [  651,  651]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  652,  653]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  654,  657]   length:   4   unique funcs:    2   type: [i32, i32] -> []
+         range: [  658,  658]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  659,  660]   length:   2   unique funcs:    1   type: [i32, i32] -> []
+         range: [  661,  661]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  662,  663]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  664,  667]   length:   4   unique funcs:    2   type: [i32, i32] -> []
+         range: [  668,  668]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  669,  670]   length:   2   unique funcs:    1   type: [i32, i32] -> []
+         range: [  671,  671]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  672,  673]   length:   2   unique funcs:    1   type: [i32] -> [i32]
+         range: [  674,  677]   length:   4   unique funcs:    2   type: [i32, i32] -> []
+         range: [  678,  678]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  679,  680]   length:   2   unique funcs:    1   type: [i32, i32] -> []
+         range: [  681,  681]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  682,  683]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  684,  684]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  685,  686]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  687,  687]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  688,  688]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i64, i64] -> [i32]
+         range: [  689,  689]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  690,  690]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  691,  691]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i64, i64] -> [i32]
+         range: [  692,  692]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [  693,  693]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  694,  694]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  695,  695]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  696,  696]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  697,  697]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  698,  698]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  699,  699]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  700,  700]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  701,  701]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  702,  702]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  703,  703]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  704,  706]   length:   3   unique funcs:    1   type: [i32] -> [i32]
+         range: [  707,  707]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  708,  709]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [  710,  711]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [  712,  712]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  713,  713]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> []
+         range: [  714,  714]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [  715,  715]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  716,  716]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  717,  717]   length:   1   unique funcs:    1   type: [] -> []
+         range: [  718,  718]   length:   1   unique funcs:    1   type: [] -> [i32]
+         range: [  719,  719]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [  720,  720]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  721,  721]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  722,  722]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  723,  723]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  724,  724]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  725,  725]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [  726,  729]   length:   4   unique funcs:    3   type: [i32] -> []
+         range: [  730,  731]   length:   2   unique funcs:    2   type: [i32] -> [i32]
+         range: [  732,  734]   length:   3   unique funcs:    2   type: [i32] -> []
+         range: [  735,  735]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [  736,  736]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  737,  737]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> []
+         range: [  738,  738]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  739,  739]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  740,  740]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  741,  741]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> []
+         range: [  742,  742]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [  743,  743]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [  744,  744]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  745,  745]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32, i32] -> []
+         range: [  746,  746]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+  563 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     2 × unrestricted                         source: local.(get|tee)   type [] -> []
+         functions matching by type (regardless whether they are in the table):               48
+         functions matching by type and present in table (regardless at which table index):   28
+         functions matching by type and present in permissable table index range:             28
+     1 × unrestricted                         source: local.(get|tee)   type [] -> [i32]
+         functions matching by type (regardless whether they are in the table):               25
+         functions matching by type and present in table (regardless at which table index):   10
+         functions matching by type and present in permissable table index range:             10
+     1 × unrestricted                         source:      other   type [i32] -> []
+         functions matching by type (regardless whether they are in the table):              103
+         functions matching by type and present in table (regardless at which table index):   61
+         functions matching by type and present in permissable table index range:             61
+     5 × unrestricted                         source:   i32.load   type [i32] -> []
+         functions matching by type (regardless whether they are in the table):              103
+         functions matching by type and present in table (regardless at which table index):   61
+         functions matching by type and present in permissable table index range:             61
+     1 × unrestricted                         source: local.(get|tee)   type [i32] -> []
+         functions matching by type (regardless whether they are in the table):              103
+         functions matching by type and present in table (regardless at which table index):   61
+         functions matching by type and present in permissable table index range:             61
+    74 × unrestricted                         source:   i32.load   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              173
+         functions matching by type and present in table (regardless at which table index):  119
+         functions matching by type and present in permissable table index range:            119
+     1 × unrestricted                         source: local.(get|tee)   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              173
+         functions matching by type and present in table (regardless at which table index):  119
+         functions matching by type and present in permissable table index range:            119
+    55 × unrestricted                         source:   i32.load   type [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              134
+         functions matching by type and present in table (regardless at which table index):   84
+         functions matching by type and present in permissable table index range:             84
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              134
+         functions matching by type and present in table (regardless at which table index):   84
+         functions matching by type and present in permissable table index range:             84
+    22 × unrestricted                         source:   i32.load   type [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              121
+         functions matching by type and present in table (regardless at which table index):   67
+         functions matching by type and present in permissable table index range:             67
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              121
+         functions matching by type and present in table (regardless at which table index):   67
+         functions matching by type and present in permissable table index range:             67
+     3 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               62
+         functions matching by type and present in table (regardless at which table index):   21
+         functions matching by type and present in permissable table index range:             21
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               62
+         functions matching by type and present in table (regardless at which table index):   21
+         functions matching by type and present in permissable table index range:             21
+    36 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               97
+         functions matching by type and present in table (regardless at which table index):   52
+         functions matching by type and present in permissable table index range:             52
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               97
+         functions matching by type and present in table (regardless at which table index):   52
+         functions matching by type and present in permissable table index range:             52
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32] -> [f32]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32] -> [f64]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     3 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               30
+         functions matching by type and present in table (regardless at which table index):   12
+         functions matching by type and present in permissable table index range:             12
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               30
+         functions matching by type and present in table (regardless at which table index):   12
+         functions matching by type and present in permissable table index range:             12
+     4 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               32
+         functions matching by type and present in table (regardless at which table index):   20
+         functions matching by type and present in permissable table index range:             20
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               32
+         functions matching by type and present in table (regardless at which table index):   20
+         functions matching by type and present in permissable table index range:             20
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     3 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               35
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     6 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               53
+         functions matching by type and present in table (regardless at which table index):   23
+         functions matching by type and present in permissable table index range:             23
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               53
+         functions matching by type and present in table (regardless at which table index):   23
+         functions matching by type and present in permissable table index range:             23
+     4 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               17
+         functions matching by type and present in table (regardless at which table index):    6
+         functions matching by type and present in permissable table index range:              6
+     6 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               46
+         functions matching by type and present in table (regardless at which table index):   38
+         functions matching by type and present in permissable table index range:             38
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               46
+         functions matching by type and present in table (regardless at which table index):   38
+         functions matching by type and present in permissable table index range:             38
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                6
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               10
+         functions matching by type and present in table (regardless at which table index):    8
+         functions matching by type and present in permissable table index range:              8
+    12 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               13
+         functions matching by type and present in table (regardless at which table index):    9
+         functions matching by type and present in permissable table index range:              9
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source:   i32.load   type [i32, i32, i64, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                3
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32, f32] -> []
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     2 × unrestricted                         source:   i32.load   type [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, f32] -> [f32]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:    173                  source:  i32.const   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:    174                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              134
+         functions matching by type and present in table (regardless at which table index):   84
+         functions matching by type and present in permissable table index range:              1
+  41 call_indirect patterns in total
+
+function #173 is indirectly called with a fixed table index
+  global.get 0
+  i32.const 560
+  i32.sub
+  ...
+function #174 is indirectly called with a fixed table index
+  local.get 1
+  local.get 1
+  i32.load align=2
+  ...
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32, i32, i32] -> [f32], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 8, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 52, count (how often class appears: 1
+  type: [i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 20, count (how often class appears: 4
+  type: [i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 12, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 9, count (how often class appears: 12
+  type: [i32, f32] -> [f32], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+  type: [i32] -> [], start idx: None, end idx: None, size (of class): 61, count (how often class appears: 1
+  type: [i32, i64, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 2
+  type: [i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 52, count (how often class appears: 36
+  type: [i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 23, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 4, count (how often class appears: 1
+  type: [i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 21, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 12, count (how often class appears: 3
+  type: [i32, i32] -> [], start idx: Some(174), end idx: Some(174), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i64, i32, i32] -> [], start idx: None, end idx: None, size (of class): 3, count (how often class appears: 1
+  type: [i32] -> [i32], start idx: None, end idx: None, size (of class): 119, count (how often class appears: 1
+  type: [i32] -> [], start idx: None, end idx: None, size (of class): 61, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 23, count (how often class appears: 6
+  type: [i32, i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 38, count (how often class appears: 1
+  type: [i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 67, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 4, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 38, count (how often class appears: 6
+  type: [i32, i32, f32] -> [], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+  type: [] -> [i32], start idx: None, end idx: None, size (of class): 10, count (how often class appears: 1
+  type: [i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 67, count (how often class appears: 22
+  type: [i32, i64, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32] -> [], start idx: None, end idx: None, size (of class): 61, count (how often class appears: 5
+  type: [i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 20, count (how often class appears: 1
+  type: [i32, i32] -> [], start idx: None, end idx: None, size (of class): 84, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 21, count (how often class appears: 3
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: Some(173), end idx: Some(173), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 6, count (how often class appears: 4
+  type: [i32, i32] -> [], start idx: None, end idx: None, size (of class): 84, count (how often class appears: 55
+  type: [] -> [], start idx: None, end idx: None, size (of class): 28, count (how often class appears: 2
+  type: [i32, i32, i32, i32, i32] -> [], start idx: None, end idx: None, size (of class): 3, count (how often class appears: 3
+  type: [i32] -> [i32], start idx: None, end idx: None, size (of class): 119, count (how often class appears: 74
+  type: [i32, i32, i32] -> [f64], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+
+latex CFI table line for this program: 541.leela & C++ & 118.8\kern.5ptk\kern1pt & 263 & 5.0\% & 1101 & 600 & 54.5\% & 520 & 47.2\% & 41 & 1 & 74 & 6.4 & 1 \\
+cfi_latex_csv_sum_avg_line:541.leela,118808,4981,263,1101,600,520,41,1,74,6.414634146341464,1
+benchmark,binary,class,size,count,source
+cfi_csv_line:"541.leela_r","leela_r.wasm",0,1,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",1,2,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",2,8,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",3,52,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",4,20,4,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",5,12,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",6,9,12,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",7,1,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",8,61,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",9,2,2,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",10,52,36,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",11,23,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",12,4,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",13,21,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",14,2,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",15,12,3,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",16,1,1,"i32.const"
+cfi_csv_line:"541.leela_r","leela_r.wasm",17,3,1,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",18,119,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",19,61,1,"other"
+cfi_csv_line:"541.leela_r","leela_r.wasm",20,23,6,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",21,38,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",22,67,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",23,4,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",24,38,6,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",25,1,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",26,10,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",27,67,22,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",28,2,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",29,61,5,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",30,20,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",31,84,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",32,2,1,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",33,21,3,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",34,1,1,"i32.const"
+cfi_csv_line:"541.leela_r","leela_r.wasm",35,6,4,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",36,84,55,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",37,28,2,"local.(get|tee)"
+cfi_csv_line:"541.leela_r","leela_r.wasm",38,3,3,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",39,119,74,"i32.load"
+cfi_csv_line:"541.leela_r","leela_r.wasm",40,1,1,"local.(get|tee)"
+total classes: 41

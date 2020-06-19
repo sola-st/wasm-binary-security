@@ -1,0 +1,122 @@
+filename: ./519.lbm_r/lbm_r.wasm
+  benchmark: 519.lbm_r
+  binary:    lbm_r.wasm
+
+Functions:        80
+  Imported:       13
+  Non-imported:   67
+  Exported:        5
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:         7
+  Of those, unique functions:    7 (i.e., at least 8.75% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:     13390
+  call:             180 (1.34% of all instructions)
+  call_indirect:     12 (0.09% of all, 6.25% of all calls)
+
+Globals:
+  #0 i32
+     init: i32.const 5248032
+     22 × global.get   43 × global.set   65 total (34/66% split)
+
+Likely the stack pointer:       Global #0
+Functions using stack pointer:   22 (32.84% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (1.49%) × [-560]
+    1  (1.49%) × [-304]
+    1  (1.49%) × [-256]
+    1  (1.49%) × [-208]
+    1  (1.49%) × [-128]
+    1  (1.49%) × [-80]
+    1  (1.49%) × [-64]
+    2  (2.99%) × [-32]
+    3  (4.48%) × [-48]
+    9 (13.43%) × [-16]
+   46 (68.66%) × []
+  functions with stack allocation total: 21 (31.34%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-560]",-560,560
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-304]",-304,304
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-256]",-256,256
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-208]",-208,208
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-128]",-128,128
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-80]",-80,80
+sp_csv_line:"519.lbm_r","lbm_r.wasm",1,1.4925373,"[-64]",-64,64
+sp_csv_line:"519.lbm_r","lbm_r.wasm",2,2.9850745,"[-32]",-32,32
+sp_csv_line:"519.lbm_r","lbm_r.wasm",3,4.477612,"[-48]",-48,48
+sp_csv_line:"519.lbm_r","lbm_r.wasm",9,13.432836,"[-16]",-16,16
+sp_csv_line:"519.lbm_r","lbm_r.wasm",46,68.656715,"[]",0,0
+
+Counts of function types (17 unique types):
+    1  (1.25%) × [i32, i32, i32, i32, i32] -> []
+    1  (1.25%) × [i32, i32, i32, i32, i32] -> [i32]
+    1  (1.25%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (1.25%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    1  (1.25%) × [i64, i32, i32] -> [i32]
+    1  (1.25%) × [f64, i32] -> [f64]
+    2  (2.50%) × [] -> []
+    2  (2.50%) × [] -> [i32]
+    2  (2.50%) × [i32, i64, i32] -> [i64]
+    2  (2.50%) × [i64, i32] -> [i32]
+    4  (5.00%) × [i32, i32, i32, i32] -> [i32]
+    5  (6.25%) × [i32, i32, i32] -> []
+    5  (6.25%) × [i32, i32, i32] -> [i32]
+    7  (8.75%) × [i32, i32] -> []
+   13 (16.25%) × [i32, i32] -> [i32]
+   14 (17.50%) × [i32] -> []
+   18 (22.50%) × [i32] -> [i32]
+
+Functions with at least one call_indirect: 10 (14.93% of all functions)
+
+Table elements initialization:
+         range: [    1,    1]   length:   1   unique funcs:    1   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [    2,    2]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    3,    3]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [    4,    5]   length:   2   unique funcs:    2   type: [i32, i64, i32] -> [i64]
+         range: [    6,    6]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [    7,    7]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+  6 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × unrestricted                         source:   i32.load   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               18
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     8 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                5
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source:   i32.load   type [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:      0                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                7
+         functions matching by type and present in table (regardless at which table index):    0
+         functions matching by type and present in permissable table index range:              0
+  5 call_indirect patterns in total
+
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32, i64, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+  type: [i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32] -> [], start idx: Some(0), end idx: Some(0), size (of class): 0, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 8
+
+latex CFI table line for this program: 519.lbm & C & 13.4\kern.5ptk\kern1pt & 12 & 6.2\% & 80 & 7 & 8.8\% & 6 & 7.5\% & 5 & 1 & 8 & 2.4 & 1 \\
+cfi_latex_csv_sum_avg_line:519.lbm,13390,180,12,80,7,6,5,1,8,2.4,1
+benchmark,binary,class,size,count,source
+cfi_csv_line:"519.lbm_r","lbm_r.wasm",0,2,1,"i32.load"
+cfi_csv_line:"519.lbm_r","lbm_r.wasm",1,1,1,"local.(get|tee)"
+cfi_csv_line:"519.lbm_r","lbm_r.wasm",2,2,1,"i32.load"
+cfi_csv_line:"519.lbm_r","lbm_r.wasm",3,0,1,"i32.const"
+cfi_csv_line:"519.lbm_r","lbm_r.wasm",4,2,8,"i32.load"
+total classes: 5

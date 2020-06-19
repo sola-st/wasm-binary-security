@@ -1,0 +1,181 @@
+filename: ./531.deepsjeng_r/deepsjeng_r.wasm
+  benchmark: 531.deepsjeng_r
+  binary:    deepsjeng_r.wasm
+
+Functions:       174
+  Imported:       12
+  Non-imported:  162
+  Exported:        5
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:        10
+  Of those, unique functions:   10 (i.e., at least 5.75% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:     52981
+  call:             888 (1.68% of all instructions)
+  call_indirect:     10 (0.02% of all, 1.11% of all calls)
+
+Globals:
+  #0 i32
+     init: i32.const 17392176
+      63 × global.get   124 × global.set   187 total (34/66% split)
+
+Likely the stack pointer:       Global #0
+Functions using stack pointer:   63 (38.89% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.62%) × [-8960]
+    1  (0.62%) × [-2928]
+    1  (0.62%) × [-2464]
+    1  (0.62%) × [-2096]
+    1  (0.62%) × [-2080]
+    1  (0.62%) × [-1936]
+    1  (0.62%) × [-1488]
+    1  (0.62%) × [-1152]
+    1  (0.62%) × [-1120]
+    1  (0.62%) × [-976]
+    1  (0.62%) × [-656]
+    1  (0.62%) × [-640]
+    1  (0.62%) × [-432]
+    1  (0.62%) × [-336]
+    1  (0.62%) × [-304]
+    1  (0.62%) × [-256]
+    1  (0.62%) × [-208]
+    1  (0.62%) × [-192]
+    1  (0.62%) × [-160]
+    1  (0.62%) × [-144]
+    1  (0.62%) × [-112]
+    2  (1.23%) × [-560]
+    2  (1.23%) × [-128]
+    2  (1.23%) × [-96]
+    2  (1.23%) × [-80]
+    3  (1.85%) × [-48]
+    4  (2.47%) × [-32]
+   25 (15.43%) × [-16]
+  101 (62.35%) × []
+  functions with stack allocation total: 61 (37.65%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-8960]",-8960,8960
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-2928]",-2928,2928
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-2464]",-2464,2464
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-2096]",-2096,2096
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-2080]",-2080,2080
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-1936]",-1936,1936
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-1488]",-1488,1488
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-1152]",-1152,1152
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-1120]",-1120,1120
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-976]",-976,976
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-656]",-656,656
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-640]",-640,640
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-432]",-432,432
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-336]",-336,336
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-304]",-304,304
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-256]",-256,256
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-208]",-208,208
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-192]",-192,192
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-160]",-160,160
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-144]",-144,144
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,0.61728394,"[-112]",-112,112
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",2,1.2345679,"[-560]",-560,560
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",2,1.2345679,"[-128]",-128,128
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",2,1.2345679,"[-96]",-96,96
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",2,1.2345679,"[-80]",-80,80
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",3,1.8518518,"[-48]",-48,48
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",4,2.4691358,"[-32]",-32,32
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",25,15.432098,"[-16]",-16,16
+sp_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",101,62.34568,"[]",0,0
+
+Counts of function types (38 unique types):
+    1  (0.57%) × [i32] -> [i64]
+    1  (0.57%) × [i32] -> [f64]
+    1  (0.57%) × [i32, i32, i32, i32, i32, i32] -> []
+    1  (0.57%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.57%) × [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.57%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.57%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.57%) × [i32, i32, i64] -> []
+    1  (0.57%) × [i32, i64] -> []
+    1  (0.57%) × [i32, i64, i64] -> []
+    1  (0.57%) × [i32, f32] -> []
+    1  (0.57%) × [i32, f64] -> []
+    1  (0.57%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    1  (0.57%) × [i64, i32, i32] -> [i32]
+    1  (0.57%) × [i64, i64] -> [f32]
+    1  (0.57%) × [i64, i64] -> [f64]
+    1  (0.57%) × [i64, i64, i64, i64] -> [i32]
+    1  (0.57%) × [f64, i32] -> [f64]
+    2  (1.15%) × [i32, i64, i32] -> [i64]
+    2  (1.15%) × [i64] -> [i32]
+    2  (1.15%) × [i64, i32] -> [i32]
+    2  (1.15%) × [i64, i64] -> [i32]
+    3  (1.72%) × [i32, i32, i32, i32] -> []
+    3  (1.72%) × [i32, i32, i32, i32, i32] -> [i32]
+    3  (1.72%) × [i32, i64, i64, i32] -> []
+    4  (2.30%) × [i32, i32] -> [i64]
+    4  (2.30%) × [i32, i32, i32, i32] -> [i32]
+    4  (2.30%) × [i32, i32, i32, i32, i32] -> []
+    4  (2.30%) × [i64, i32] -> [i64]
+    5  (2.87%) × [] -> [i32]
+    6  (3.45%) × [i32, i64, i64, i64, i64] -> []
+    8  (4.60%) × [i32] -> []
+   12  (6.90%) × [i32, i32] -> []
+   13  (7.47%) × [i32, i32, i32] -> [i32]
+   14  (8.05%) × [i32, i32, i32] -> []
+   15  (8.62%) × [] -> []
+   24 (13.79%) × [i32, i32] -> [i32]
+   26 (14.94%) × [i32] -> [i32]
+
+Functions with at least one call_indirect: 8 (4.94% of all functions)
+
+Table elements initialization:
+         range: [    1,    1]   length:   1   unique funcs:    1   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [    2,    2]   length:   1   unique funcs:    1   type: [i32, i32] -> []
+         range: [    3,    4]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [    5,    5]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    6,    6]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [    7,    8]   length:   2   unique funcs:    2   type: [i32, i64, i32] -> [i64]
+         range: [    9,    9]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [   10,   10]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+  8 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × unrestricted                         source:   i32.load   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               26
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               12
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     6 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               13
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × unrestricted                         source:   i32.load   type [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+  5 call_indirect patterns in total
+
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+  type: [i32, i64, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 4, count (how often class appears: 6
+  type: [i32, i32] -> [], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+
+latex CFI table line for this program: 531.deepsjeng & C & 53.0\kern.5ptk\kern1pt & 10 & 1.1\% & 174 & 10 & 5.7\% & 8 & 4.6\% & 5 & 1 & 6 & 2.0 & 1 \\
+cfi_latex_csv_sum_avg_line:531.deepsjeng,52981,888,10,174,10,8,5,1,6,2,1
+benchmark,binary,class,size,count,source
+cfi_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",0,1,1,"local.(get|tee)"
+cfi_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",1,2,1,"i32.load"
+cfi_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",2,2,1,"i32.load"
+cfi_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",3,4,6,"i32.load"
+cfi_csv_line:"531.deepsjeng_r","deepsjeng_r.wasm",4,1,1,"local.(get|tee)"
+total classes: 5

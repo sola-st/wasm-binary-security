@@ -1,0 +1,9 @@
+  in main()
+  in intermediate()
+  in leaf()
+    global const string, addr: 0x75c (1884)
+    stack-allocated (local) string, addr: 0x1420 (5152)
+    stack value in leaf() function, addr: 0x14ac (5292)
+    stack grows: 140
+    dynamically (heap) allocated string, addr: 0x5013b8 (5247928)
+    argv[0]: /mnt/Data/Documents/SOLA/WebAssembly/security/evaluations/memory-layout/emcc-fastcomp.js, addr: 0x13c0 (5056)

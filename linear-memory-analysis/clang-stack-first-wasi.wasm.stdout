@@ -1,0 +1,9 @@
+  in main()
+  in intermediate()
+  in leaf()
+    global const string, addr: 0x10000 (65536)
+    stack-allocated (local) string, addr: 0xffa0 (65440)
+    stack value in leaf() function, addr: 0xff9c (65436)
+    stack grows: -4
+    dynamically (heap) allocated string, addr: 0x200d0 (131280)
+    argv[0]: clang-stack-first-wasi.wasm, addr: 0x200a0 (131232)

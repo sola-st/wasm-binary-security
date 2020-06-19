@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vulnerable WebAssembly Application: Client-Side Image Conversion</title>
+</head>
+
+<body>
+    Select input <a href="https://en.wikipedia.org/wiki/Netpbm#File_formats">PNM file</a> to convert and show:
+    <input type="file" onchange="uploadFile()">
+    <script>
+        // Do not run main() function in WebAssemblz binary.
+        var Module = { "noInitialRun": true };
+
+        function uploadFile() {
+            // Get uploaded file as typed array view.
+            const file = document.querySelector("input[type=file]").files[0];
+            file.arrayBuffer().then(buffer => {
+                const typedArray = new Uint8Array(buffer);
+                // Pass via emscripten's virtual in-memory filesystem.
+                FS.writeFile("input.pnm", typedArray);
+                // Call exported C function (which converts the PNM file to PNG and shows it).
+                Module.ccall("convert_and_preview");
+            });
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

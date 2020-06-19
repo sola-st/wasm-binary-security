@@ -1,0 +1,777 @@
+Functions:      9525
+  Imported:       45
+  Non-imported: 9480
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:      6054
+  Of those, unique functions: 3409 (i.e., at least 35.79% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Globals:
+  #0 i32
+     import: env.__table_base
+         0 × global.get       0 × global.set       0 total
+  #1 f64
+     import: global.NaN
+         3 × global.get       0 × global.set       3 total (100/0% split)
+  #2 f64
+     import: global.Infinity
+         1 × global.get       0 × global.set       1 total (100/0% split)
+  #3 i32
+     init: i32.const 1937408
+      7765 × global.get   11581 × global.set   19346 total (40/60% split)
+
+Likely the stack pointer:       Global #3
+Functions using stack pointer: 3724 (39.28% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.01%) × [16, 144, 144]
+    1  (0.01%) × [16, 176, 176]
+    1  (0.01%) × [48, 16]
+    1  (0.01%) × [80, 400]
+    1  (0.01%) × [144, 16, 16]
+    1  (0.01%) × [304, 16, 16]
+    1  (0.01%) × [336, 16]
+    1  (0.01%) × [528]
+    1  (0.01%) × [528, 144, 144, 144]
+    1  (0.01%) × [544]
+    1  (0.01%) × [576]
+    1  (0.01%) × [752]
+    1  (0.01%) × [784]
+    1  (0.01%) × [800]
+    1  (0.01%) × [816]
+    1  (0.01%) × [928]
+    1  (0.01%) × [960]
+    1  (0.01%) × [976]
+    1  (0.01%) × [992]
+    1  (0.01%) × [1040]
+    1  (0.01%) × [1056]
+    1  (0.01%) × [1072]
+    1  (0.01%) × [1712]
+    1  (0.01%) × [2112]
+    1  (0.01%) × [2208]
+    1  (0.01%) × [2608]
+    1  (0.01%) × [3424]
+    1  (0.01%) × [4112]
+    1  (0.01%) × [4336]
+    1  (0.01%) × [6256]
+    2  (0.02%) × [16, 48]
+    2  (0.02%) × [16, 528, 144, 144, 144]
+    2  (0.02%) × [448]
+    2  (0.02%) × [480]
+    2  (0.02%) × [560]
+    2  (0.02%) × [624]
+    2  (0.02%) × [672]
+    2  (0.02%) × [736]
+    2  (0.02%) × [912]
+    2  (0.02%) × [2096]
+    3  (0.03%) × [32, 16]
+    3  (0.03%) × [320]
+    3  (0.03%) × [400]
+    3  (0.03%) × [432]
+    3  (0.03%) × [464]
+    3  (0.03%) × [496]
+    3  (0.03%) × [512]
+    3  (0.03%) × [656]
+    3  (0.03%) × [2160]
+    4  (0.04%) × [304]
+    4  (0.04%) × [368]
+    4  (0.04%) × [384]
+    5  (0.05%) × [352]
+    6  (0.06%) × [256]
+    6  (0.06%) × [336]
+    6  (0.06%) × [416]
+    8  (0.08%) × [272]
+    8  (0.08%) × [288]
+   13  (0.14%) × [192]
+   14  (0.15%) × [208]
+   14  (0.15%) × [224]
+   14  (0.15%) × [240]
+   15  (0.16%) × [176]
+   20  (0.21%) × [160]
+   30  (0.32%) × [144]
+   42  (0.44%) × [112]
+   42  (0.44%) × [128]
+   71  (0.75%) × [96]
+  107  (1.13%) × [80]
+  286  (3.02%) × [48]
+  638  (6.73%) × [32]
+ 2058 (21.71%) × [16]
+
+Counts of function types (113 unique types):
+    1  (0.01%) × [] -> [i64]
+    1  (0.01%) × [] -> [f64]
+    1  (0.01%) × [i32, i32] -> [f64]
+    1  (0.01%) × [i32, i32, i32, i32] -> [i64]
+    1  (0.01%) × [i32, i32, i32, i32] -> [f64]
+    1  (0.01%) × [i32, i32, i32, i32, i32] -> [f64]
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i32, i32, i32, i64] -> [i32]
+    1  (0.01%) × [i32, i32, i32, i32, i64, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i32, i32, i64, i64, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i64] -> [i64]
+    1  (0.01%) × [i32, i32, i32, i64, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i32, i64, i64] -> []
+    1  (0.01%) × [i32, i32, i64] -> [i64]
+    1  (0.01%) × [i32, i32, i64, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i64, i32, i64, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i64, i64] -> []
+    1  (0.01%) × [i32, i32, i64, i64, i32, i32, i64, i64] -> [i32]
+    1  (0.01%) × [i32, i32, i64, i64, i64, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i32, i64, i64, i64, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i32, i64, i64, i64, i64, i32, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i64] -> [i64]
+    1  (0.01%) × [i32, i64, i32, i32] -> [i64]
+    1  (0.01%) × [i32, i64, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i64, i32, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i64, i64] -> [i64]
+    1  (0.01%) × [i32, i64, i64, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i64, i64, i32, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i32, i64, i64, i32, i32, i32, i32, i32] -> []
+    1  (0.01%) × [i32, i64, i64, i32, i64, i64] -> [i32]
+    1  (0.01%) × [i32, i64, i64, i64, i32] -> []
+    1  (0.01%) × [i32, i64, i64, i64, i64, i32, i32] -> [i32]
+    1  (0.01%) × [i64, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i64, i32, i32, i32, i32, i32] -> [i64]
+    1  (0.01%) × [i64, i32, i64, i32] -> []
+    1  (0.01%) × [i64, i64, i32] -> [i32]
+    1  (0.01%) × [i64, i64, i32, i32] -> []
+    1  (0.01%) × [i64, i64, i32, i32] -> [i32]
+    1  (0.01%) × [i64, i64, i32, i32, i32] -> [i32]
+    1  (0.01%) × [i64, i64, i64, i64, i32, i32, i32] -> [i32]
+    2  (0.02%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i64] -> [i32]
+    2  (0.02%) × [i32, i32, i32, i32, i64] -> [i64]
+    2  (0.02%) × [i32, i32, i32, i32, i64, i32, i32] -> []
+    2  (0.02%) × [i32, i32, i32, i64] -> [i32]
+    2  (0.02%) × [i32, i32, i32, i64, i32, i32] -> [i32]
+    2  (0.02%) × [i32, i32, i32, i64, i64, i32] -> [i32]
+    2  (0.02%) × [i32, i32, i64, i32] -> []
+    2  (0.02%) × [i32, i32, i64, i32] -> [i32]
+    2  (0.02%) × [i32, i32, i64, i64, i32, i32, i32, i32] -> []
+    2  (0.02%) × [i32, i64, i32, i32] -> []
+    2  (0.02%) × [i32, i64, i32, i32] -> [i32]
+    2  (0.02%) × [i32, i64, i32, i32, i32] -> [i32]
+    2  (0.02%) × [i32, i64, i64, i32, i32] -> []
+    2  (0.02%) × [i32, i64, i64, i32, i32] -> [i32]
+    2  (0.02%) × [i32, i64, i64, i32, i32, i32, i32, i32] -> [i32]
+    2  (0.02%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    2  (0.02%) × [i64] -> [i64]
+    2  (0.02%) × [i64, i32] -> [i64]
+    2  (0.02%) × [i64, i32, i32] -> []
+    2  (0.02%) × [i64, i64, i64, i32, i32, i32] -> []
+    2  (0.02%) × [i64, i64, i64, i32, i32, i32, i32] -> []
+    2  (0.02%) × [f64, f64] -> [f64]
+    3  (0.03%) × [i32, i32, i32] -> [i64]
+    3  (0.03%) × [i32, i32, i32, i32, i64, i32] -> [i32]
+    3  (0.03%) × [i32, i32, i32, i64, i32] -> [i32]
+    3  (0.03%) × [i32, i32, i64, i64, i32] -> []
+    3  (0.03%) × [i32, i64, i32] -> []
+    3  (0.03%) × [i32, i64, i64] -> [i32]
+    3  (0.03%) × [i64, i32, i32] -> [i32]
+    3  (0.03%) × [f64, i32] -> [f64]
+    4  (0.04%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    4  (0.04%) × [i32, i32, i64, i32, i32] -> [i32]
+    4  (0.04%) × [i32, i64, i32] -> [i64]
+    4  (0.04%) × [i32, i64, i64, i32] -> []
+    4  (0.04%) × [i32, i64, i64, i32] -> [i32]
+    4  (0.04%) × [i64] -> []
+    5  (0.05%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    5  (0.05%) × [i32, i32, i32, i64] -> []
+    5  (0.05%) × [i32, i32, i64] -> []
+    6  (0.06%) × [i32, i32] -> [i64]
+    6  (0.06%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    6  (0.06%) × [i32, i32, i64, i64] -> [i32]
+    8  (0.08%) × [i32, i64, i32] -> [i32]
+    8  (0.08%) × [i64] -> [i32]
+    9  (0.09%) × [i32, i32, i64] -> [i32]
+   10  (0.10%) × [i64, i32] -> [i32]
+   11  (0.12%) × [i32, i64] -> [i32]
+   14  (0.15%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+   14  (0.15%) × [i32, i64] -> []
+   15  (0.16%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+   19  (0.20%) × [i32, i32, i32, i32, i32, i32, i32] -> []
+   22  (0.23%) × [i32] -> [i64]
+   33  (0.35%) × [i32, i32, i32, i32, i32, i32] -> []
+   49  (0.51%) × [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+   72  (0.76%) × [i32, i32, i32, i32, i32] -> []
+  105  (1.10%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+  233  (2.45%) × [i32, i32, i32, i32, i32] -> [i32]
+  321  (3.37%) × [i32, i32, i32, i32] -> []
+  424  (4.45%) × [] -> []
+  494  (5.19%) × [i32, i32, i32, i32] -> [i32]
+  521  (5.47%) × [i32, i32, i32] -> []
+  726  (7.62%) × [] -> [i32]
+  831  (8.72%) × [i32, i32] -> []
+ 1162 (12.20%) × [i32, i32, i32] -> [i32]
+ 1175 (12.34%) × [i32] -> []
+ 1196 (12.56%) × [i32] -> [i32]
+ 1882 (19.76%) × [i32, i32] -> [i32]
+
+
+Functions with at least one call_indirect: 1017 (10.73% of all functions)
+
+Table elements initialization:
+         range: [    0,  511]   length: 512   unique funcs:  336   type: [] -> [i32]
+         range: [  512, 1023]   length: 512   unique funcs:  204   type: [i32] -> [i32]
+         range: [ 1024, 1025]   length:   2   unique funcs:    2   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [ 1026, 3073]   length:2048   unique funcs: 1032   type: [i32, i32] -> [i32]
+         range: [ 3074, 4097]   length:1024   unique funcs:  698   type: [i32, i32, i32] -> [i32]
+         range: [ 4098, 4609]   length: 512   unique funcs:  239   type: [i32, i32, i32, i32] -> [i32]
+         range: [ 4610, 4737]   length: 128   unique funcs:   86   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [ 4738, 4769]   length:  32   unique funcs:   28   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [ 4770, 4785]   length:  16   unique funcs:   15   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [ 4786, 4787]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [ 4788, 4791]   length:   4   unique funcs:    3   type: [i32, i32, i32, i32, i64, i32] -> [i32]
+         range: [ 4792, 4795]   length:   4   unique funcs:    3   type: [i32, i32, i64] -> [i32]
+         range: [ 4796, 4803]   length:   8   unique funcs:    5   type: [i32, i32, i64, i64] -> [i32]
+         range: [ 4804, 4807]   length:   4   unique funcs:    4   type: [i32, i64, i32] -> [i32]
+         range: [ 4808, 4809]   length:   2   unique funcs:    2   type: [i32, i64, i64, i32] -> [i32]
+         range: [ 4810, 4811]   length:   2   unique funcs:    2   type: [i32] -> [i64]
+         range: [ 4812, 4815]   length:   4   unique funcs:    3   type: [i32, i64, i32] -> [i64]
+         range: [ 4816, 4817]   length:   2   unique funcs:    2   type: [i64] -> [i64]
+         range: [ 4818, 4881]   length:  64   unique funcs:   47   type: [] -> []
+         range: [ 4882, 5393]   length: 512   unique funcs:  339   type: [i32] -> []
+         range: [ 5394, 5649]   length: 256   unique funcs:  131   type: [i32, i32] -> []
+         range: [ 5650, 5777]   length: 128   unique funcs:   94   type: [i32, i32, i32] -> []
+         range: [ 5778, 6033]   length: 256   unique funcs:  117   type: [i32, i32, i32, i32] -> []
+         range: [ 6034, 6041]   length:   8   unique funcs:    5   type: [i32, i32, i32, i32, i32] -> []
+         range: [ 6042, 6043]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [ 6044, 6047]   length:   4   unique funcs:    3   type: [i32, i32, i64] -> []
+         range: [ 6048, 6049]   length:   2   unique funcs:    2   type: [i32, i32, i64, i64, i32] -> []
+         range: [ 6050, 6053]   length:   4   unique funcs:    3   type: [i32, i64] -> []
+  28 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × range: [    0,  511]   length: 512   source:        end   type: [] -> [i32]
+         functions matching by type (regardless whether they are in the table):              726
+         functions matching by type and present in table (regardless at which table index):  336
+         functions matching by type and present in permissable table index range:            336
+    65 × range: [    0,  511]   length: 512   source:   i32.load   type: [] -> [i32]
+         functions matching by type (regardless whether they are in the table):              726
+         functions matching by type and present in table (regardless at which table index):  336
+         functions matching by type and present in permissable table index range:            336
+    30 × range: [    0,  511]   length: 512   source:  local.get   type: [] -> [i32]
+         functions matching by type (regardless whether they are in the table):              726
+         functions matching by type and present in table (regardless at which table index):  336
+         functions matching by type and present in permissable table index range:            336
+    77 × range: [  512, 1023]   length: 512   source:   i32.load   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1196
+         functions matching by type and present in table (regardless at which table index):  204
+         functions matching by type and present in permissable table index range:            204
+   244 × range: [  512, 1023]   length: 512   source:  local.get   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1196
+         functions matching by type and present in table (regardless at which table index):  204
+         functions matching by type and present in permissable table index range:            204
+     1 × fixed index:   1025                  source:  i32.const   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              1
+     1 × range: [ 1026, 3073]   length:2048   source:        end   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:           1032
+     1 × range: [ 1026, 3073]   length:2048   source:     select   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:           1032
+   521 × range: [ 1026, 3073]   length:2048   source:   i32.load   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:           1032
+   575 × range: [ 1026, 3073]   length:2048   source:  local.get   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:           1032
+     6 × fixed index:   2268                  source:  i32.const   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   2269                  source:  i32.const   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1882
+         functions matching by type and present in table (regardless at which table index): 1032
+         functions matching by type and present in permissable table index range:              1
+     3 × offset: +3074                        source:  local.get   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:            698
+    17 × range: [ 3074, 4097]   length:1024   source:   i32.load   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:            698
+   120 × range: [ 3074, 4097]   length:1024   source:  local.get   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:            698
+     2 × fixed index:   3119                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     4 × fixed index:   3120                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     2 × fixed index:   3360                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3389                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3395                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     2 × fixed index:   3401                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     4 × fixed index:   3402                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3407                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     6 × fixed index:   3409                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     4 × fixed index:   3413                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3759                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3823                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   3824                  source:  i32.const   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):             1162
+         functions matching by type and present in table (regardless at which table index):  698
+         functions matching by type and present in permissable table index range:              1
+     1 × range: [ 4098, 4609]   length: 512   source:     select   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              494
+         functions matching by type and present in table (regardless at which table index):  239
+         functions matching by type and present in permissable table index range:            239
+    66 × range: [ 4098, 4609]   length: 512   source:   i32.load   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              494
+         functions matching by type and present in table (regardless at which table index):  239
+         functions matching by type and present in permissable table index range:            239
+    39 × range: [ 4098, 4609]   length: 512   source:  local.get   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              494
+         functions matching by type and present in table (regardless at which table index):  239
+         functions matching by type and present in permissable table index range:            239
+     3 × fixed index:   4312                  source:  i32.const   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              494
+         functions matching by type and present in table (regardless at which table index):  239
+         functions matching by type and present in permissable table index range:              1
+     1 × offset: +4610                        source:  local.get   type: [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              233
+         functions matching by type and present in table (regardless at which table index):   86
+         functions matching by type and present in permissable table index range:             86
+     1 × range: [ 4610, 4737]   length: 128   source:     select   type: [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              233
+         functions matching by type and present in table (regardless at which table index):   86
+         functions matching by type and present in permissable table index range:             86
+     2 × range: [ 4610, 4737]   length: 128   source:   i32.load   type: [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              233
+         functions matching by type and present in table (regardless at which table index):   86
+         functions matching by type and present in permissable table index range:             86
+    19 × range: [ 4610, 4737]   length: 128   source:  local.get   type: [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              233
+         functions matching by type and present in table (regardless at which table index):   86
+         functions matching by type and present in permissable table index range:             86
+     1 × range: [ 4738, 4769]   length:  32   source:     select   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              105
+         functions matching by type and present in table (regardless at which table index):   28
+         functions matching by type and present in permissable table index range:             28
+     1 × range: [ 4738, 4769]   length:  32   source:   i32.load   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              105
+         functions matching by type and present in table (regardless at which table index):   28
+         functions matching by type and present in permissable table index range:             28
+     6 × range: [ 4738, 4769]   length:  32   source:  local.get   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):              105
+         functions matching by type and present in table (regardless at which table index):   28
+         functions matching by type and present in permissable table index range:             28
+     1 × range: [ 4770, 4785]   length:  16   source:        end   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               49
+         functions matching by type and present in table (regardless at which table index):   15
+         functions matching by type and present in permissable table index range:             15
+     3 × range: [ 4770, 4785]   length:  16   source:  local.get   type: [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               49
+         functions matching by type and present in table (regardless at which table index):   15
+         functions matching by type and present in permissable table index range:             15
+     1 × range: [ 4788, 4791]   length:   4   source:   i32.load   type: [i32, i32, i32, i32, i64, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                3
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × range: [ 4792, 4795]   length:   4   source:   i32.load   type: [i32, i32, i64] -> [i32]
+         functions matching by type (regardless whether they are in the table):                9
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     5 × range: [ 4792, 4795]   length:   4   source:  local.get   type: [i32, i32, i64] -> [i32]
+         functions matching by type (regardless whether they are in the table):                9
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × range: [ 4796, 4803]   length:   8   source:   i32.load   type: [i32, i32, i64, i64] -> [i32]
+         functions matching by type (regardless whether they are in the table):                6
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     3 × range: [ 4804, 4807]   length:   4   source:  local.get   type: [i32, i64, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                8
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × range: [ 4808, 4809]   length:   2   source:   i32.load   type: [i32, i64, i64, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     3 × range: [ 4810, 4811]   length:   2   source:   i32.load   type: [i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):               22
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     3 × range: [ 4812, 4815]   length:   4   source:  local.get   type: [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     9 × range: [ 4816, 4817]   length:   2   source:   i32.load   type: [i64] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+    20 × range: [ 4816, 4817]   length:   2   source:  local.get   type: [i64] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × range: [ 4818, 4881]   length:  64   source:        end   type: [] -> []
+         functions matching by type (regardless whether they are in the table):              424
+         functions matching by type and present in table (regardless at which table index):   47
+         functions matching by type and present in permissable table index range:             47
+    33 × range: [ 4818, 4881]   length:  64   source:   i32.load   type: [] -> []
+         functions matching by type (regardless whether they are in the table):              424
+         functions matching by type and present in table (regardless at which table index):   47
+         functions matching by type and present in permissable table index range:             47
+    29 × range: [ 4818, 4881]   length:  64   source:  local.get   type: [] -> []
+         functions matching by type (regardless whether they are in the table):              424
+         functions matching by type and present in table (regardless at which table index):   47
+         functions matching by type and present in permissable table index range:             47
+    43 × range: [ 4882, 5393]   length: 512   source:   i32.load   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:            339
+   126 × range: [ 4882, 5393]   length: 512   source:  local.get   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:            339
+     2 × fixed index:   5216                  source:  i32.const   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:              1
+     2 × fixed index:   5217                  source:  i32.const   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   5218                  source:  i32.const   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   5235                  source:  i32.const   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):             1175
+         functions matching by type and present in table (regardless at which table index):  339
+         functions matching by type and present in permissable table index range:              1
+    25 × range: [ 5394, 5649]   length: 256   source:   i32.load   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              831
+         functions matching by type and present in table (regardless at which table index):  131
+         functions matching by type and present in permissable table index range:            131
+   808 × range: [ 5394, 5649]   length: 256   source:  local.get   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              831
+         functions matching by type and present in table (regardless at which table index):  131
+         functions matching by type and present in permissable table index range:            131
+     2 × fixed index:   5487                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              831
+         functions matching by type and present in table (regardless at which table index):  131
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:   5530                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              831
+         functions matching by type and present in table (regardless at which table index):  131
+         functions matching by type and present in permissable table index range:              1
+    16 × range: [ 5650, 5777]   length: 128   source:   i32.load   type: [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              521
+         functions matching by type and present in table (regardless at which table index):   94
+         functions matching by type and present in permissable table index range:             94
+   377 × range: [ 5650, 5777]   length: 128   source:  local.get   type: [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              521
+         functions matching by type and present in table (regardless at which table index):   94
+         functions matching by type and present in permissable table index range:             94
+     3 × range: [ 5778, 6033]   length: 256   source:   i32.load   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              321
+         functions matching by type and present in table (regardless at which table index):  117
+         functions matching by type and present in permissable table index range:            117
+    33 × range: [ 5778, 6033]   length: 256   source:  local.get   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              321
+         functions matching by type and present in table (regardless at which table index):  117
+         functions matching by type and present in permissable table index range:            117
+     7 × fixed index:   5951                  source:  i32.const   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):              321
+         functions matching by type and present in table (regardless at which table index):  117
+         functions matching by type and present in permissable table index range:              1
+     2 × range: [ 6034, 6041]   length:   8   source:   i32.load   type: [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               72
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     1 × range: [ 6042, 6043]   length:   2   source:  local.get   type: [i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               33
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × range: [ 6044, 6047]   length:   4   source:  local.get   type: [i32, i32, i64] -> []
+         functions matching by type (regardless whether they are in the table):                5
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × range: [ 6048, 6049]   length:   2   source:   i32.load   type: [i32, i32, i64, i64, i32] -> []
+         functions matching by type (regardless whether they are in the table):                3
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     3 × range: [ 6050, 6053]   length:   4   source:   i32.load   type: [i32, i64] -> []
+         functions matching by type (regardless whether they are in the table):               14
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+  74 call_indirect patterns in total
+
+function #5305 is indirectly called with a fixed table index
+  global.get 3
+  local.set 21
+  global.get 3
+  ...
+function #5406 is indirectly called with a fixed table index
+  local.get 0
+  local.set 3
+  loop
+  ...
+function #5396 is indirectly called with a fixed table index
+  local.get 0
+  local.get 1
+  i32.const 8
+  ...
+function #8495 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #8494 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #833 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #1893 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #7763 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #7729 is indirectly called with a fixed table index
+  call 61
+  call 215
+  local.set 3
+  ...
+function #7728 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #7720 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #7718 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #3335 is indirectly called with a fixed table index
+  global.get 3
+  local.set 3
+  global.get 3
+  ...
+function #6776 is indirectly called with a fixed table index
+  local.get 1
+  i32.const 0
+  i32.ne
+  ...
+function #5674 is indirectly called with a fixed table index
+  i32.const 1934404
+  i32.load align=2
+  local.tee 0
+  ...
+function #5673 is indirectly called with a fixed table index
+  global.get 3
+  local.set 9
+  global.get 3
+  ...
+function #7731 is indirectly called with a fixed table index
+  call 61
+  i32.const 23
+  i32.const 0
+  ...
+function #6498 is indirectly called with a fixed table index
+  local.get 0
+  i32.const 1923120
+  i32.load align=2
+  ...
+function #1478 is indirectly called with a fixed table index
+  loop
+  local.get 0
+  i32.load align=2
+  ...
+function #6400 is indirectly called with a fixed table index
+  local.get 0
+  i32.const 0
+  i32.const 1
+  ...
+function #5255 is indirectly called with a fixed table index
+  local.get 0
+  i32.load offset=8 align=2
+  i32.const 0
+  ...
+function #9200 is indirectly called with a fixed table index
+  local.get 0
+  i32.load offset=8 align=2
+  local.set 2
+  ...
+function #5304 is indirectly called with a fixed table index
+  local.get 1
+  i32.load align=2
+  i32.const 7
+  ...
+function #790 is indirectly called with a fixed table index
+  local.get 1
+  i32.eqz
+  if
+  ...
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: Some(1025), end idx: Some(1025), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i64] -> [i32], start idx: Some(4792), end idx: Some(4795), size (of class): 3, count (how often class appears: 6
+  type: [i32, i32, i64, i64] -> [i32], start idx: Some(4796), end idx: Some(4803), size (of class): 5, count (how often class appears: 1
+  type: [i32, i64] -> [], start idx: Some(6050), end idx: Some(6053), size (of class): 3, count (how often class appears: 3
+  type: [i32, i32, i32] -> [i32], start idx: Some(3824), end idx: Some(3824), size (of class): 1, count (how often class appears: 1
+  type: [i32, i64, i64, i32] -> [i32], start idx: Some(4808), end idx: Some(4809), size (of class): 2, count (how often class appears: 1
+  type: [i32] -> [i32], start idx: Some(512), end idx: Some(1023), size (of class): 204, count (how often class appears: 321
+  type: [i32, i64, i32] -> [i64], start idx: Some(4812), end idx: Some(4815), size (of class): 3, count (how often class appears: 3
+  type: [] -> [], start idx: Some(4818), end idx: Some(4881), size (of class): 47, count (how often class appears: 63
+  type: [i32, i32] -> [i32], start idx: Some(2268), end idx: Some(2268), size (of class): 1, count (how often class appears: 6
+  type: [i32, i32, i32] -> [i32], start idx: Some(3360), end idx: Some(3360), size (of class): 1, count (how often class appears: 2
+  type: [i32, i32, i32] -> [i32], start idx: Some(3389), end idx: Some(3389), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(3395), end idx: Some(3395), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32, i32] -> [i32], start idx: Some(4738), end idx: Some(4769), size (of class): 28, count (how often class appears: 8
+  type: [i32, i32, i32] -> [i32], start idx: Some(3759), end idx: Some(3759), size (of class): 1, count (how often class appears: 1
+  type: [i32] -> [], start idx: Some(5235), end idx: Some(5235), size (of class): 1, count (how often class appears: 1
+  type: [i32, i64, i32] -> [i32], start idx: Some(4804), end idx: Some(4807), size (of class): 4, count (how often class appears: 3
+  type: [i32, i32, i32, i32, i64, i32] -> [i32], start idx: Some(4788), end idx: Some(4791), size (of class): 3, count (how often class appears: 1
+  type: [i32, i32, i32] -> [], start idx: Some(5650), end idx: Some(5777), size (of class): 94, count (how often class appears: 393
+  type: [i32, i32, i32] -> [i32], start idx: Some(3401), end idx: Some(3401), size (of class): 1, count (how often class appears: 2
+  type: [i32, i32, i32] -> [i32], start idx: Some(3074), end idx: None, size (of class): 698, count (how often class appears: 3
+  type: [i32, i32, i32, i32, i32] -> [i32], start idx: Some(4610), end idx: None, size (of class): 86, count (how often class appears: 1
+  type: [i32] -> [i64], start idx: Some(4810), end idx: Some(4811), size (of class): 2, count (how often class appears: 3
+  type: [i32] -> [], start idx: Some(4882), end idx: Some(5393), size (of class): 339, count (how often class appears: 169
+  type: [i32, i32] -> [], start idx: Some(5530), end idx: Some(5530), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(3407), end idx: Some(3407), size (of class): 1, count (how often class appears: 1
+  type: [i32] -> [], start idx: Some(5216), end idx: Some(5216), size (of class): 1, count (how often class appears: 2
+  type: [i32, i32, i32] -> [i32], start idx: Some(3402), end idx: Some(3402), size (of class): 1, count (how often class appears: 4
+  type: [i32, i32, i32, i32, i32, i32] -> [], start idx: Some(6042), end idx: Some(6043), size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32, i32, i32] -> [i32], start idx: Some(4610), end idx: Some(4737), size (of class): 86, count (how often class appears: 22
+  type: [i32, i32, i32] -> [i32], start idx: Some(3120), end idx: Some(3120), size (of class): 1, count (how often class appears: 4
+  type: [i32, i32, i32, i32, i32, i32, i32] -> [i32], start idx: Some(4770), end idx: Some(4785), size (of class): 15, count (how often class appears: 4
+  type: [i32, i32, i32, i32] -> [], start idx: Some(5778), end idx: Some(6033), size (of class): 117, count (how often class appears: 36
+  type: [i32, i32, i32] -> [i32], start idx: Some(3413), end idx: Some(3413), size (of class): 1, count (how often class appears: 4
+  type: [i32, i32, i32, i32, i32] -> [], start idx: Some(6034), end idx: Some(6041), size (of class): 5, count (how often class appears: 2
+  type: [i32, i32, i32, i32] -> [i32], start idx: Some(4098), end idx: Some(4609), size (of class): 239, count (how often class appears: 106
+  type: [i32, i32, i64, i64, i32] -> [], start idx: Some(6048), end idx: Some(6049), size (of class): 2, count (how often class appears: 1
+  type: [i32, i32] -> [i32], start idx: Some(2269), end idx: Some(2269), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i64] -> [], start idx: Some(6044), end idx: Some(6047), size (of class): 3, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(3823), end idx: Some(3823), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(3074), end idx: Some(4097), size (of class): 698, count (how often class appears: 137
+  type: [i32] -> [], start idx: Some(5217), end idx: Some(5217), size (of class): 1, count (how often class appears: 2
+  type: [i32, i32, i32] -> [i32], start idx: Some(3119), end idx: Some(3119), size (of class): 1, count (how often class appears: 2
+  type: [i32] -> [], start idx: Some(5218), end idx: Some(5218), size (of class): 1, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(3409), end idx: Some(3409), size (of class): 1, count (how often class appears: 6
+  type: [i32, i32, i32, i32] -> [i32], start idx: Some(4312), end idx: Some(4312), size (of class): 1, count (how often class appears: 3
+  type: [i32, i32] -> [], start idx: Some(5394), end idx: Some(5649), size (of class): 131, count (how often class appears: 833
+  type: [i32, i32, i32, i32] -> [], start idx: Some(5951), end idx: Some(5951), size (of class): 1, count (how often class appears: 7
+  type: [i64] -> [i64], start idx: Some(4816), end idx: Some(4817), size (of class): 2, count (how often class appears: 29
+  type: [i32, i32] -> [i32], start idx: Some(1026), end idx: Some(3073), size (of class): 1032, count (how often class appears: 1098
+  type: [] -> [i32], start idx: Some(0), end idx: Some(511), size (of class): 336, count (how often class appears: 96
+  type: [i32, i32] -> [], start idx: Some(5487), end idx: Some(5487), size (of class): 1, count (how often class appears: 2
+
+latex CFI table line for this program: C & 3.0M & 137.4k & 3.4k & 2.42\% & 9.5k & 3.4k & 35.8\% & 1.0k & 10.7\% & 3.9M & 1.6M & 40.6\% & 1.6M & 39.8\% && 624.4k & 15.9\%
+
+class;size;count
+0;1;1
+1;3;6
+2;5;1
+3;3;3
+4;1;1
+5;2;1
+6;204;321
+7;3;3
+8;47;63
+9;1;6
+10;1;2
+11;1;1
+12;1;1
+13;28;8
+14;1;1
+15;1;1
+16;4;3
+17;3;1
+18;94;393
+19;1;2
+20;698;3
+21;86;1
+22;2;3
+23;339;169
+24;1;1
+25;1;1
+26;1;2
+27;1;4
+28;2;1
+29;86;22
+30;1;4
+31;15;4
+32;117;36
+33;1;4
+34;5;2
+35;239;106
+36;2;1
+37;1;1
+38;3;1
+39;1;1
+40;698;137
+41;1;2
+42;1;2
+43;1;1
+44;1;6
+45;1;3
+46;131;833
+47;1;7
+48;2;29
+49;1032;1098
+50;336;96
+51;1;2
+total classes: 52

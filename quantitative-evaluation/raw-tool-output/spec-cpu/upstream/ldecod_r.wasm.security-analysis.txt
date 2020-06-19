@@ -1,0 +1,412 @@
+filename: ldecod_r.wasm
+  binary:    ldecod_r.wasm
+
+Functions:       551
+  Imported:       21
+  Non-imported:  530
+  Exported:        9
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:       190
+  Of those, unique functions:  129 (i.e., at least 23.41% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:    233043
+  call:            3776 (1.62% of all instructions)
+  call_indirect:    354 (0.15% of all, 8.57% of all calls)
+
+Globals:
+  #0 i32
+     import: env.__table_base
+       0 × global.get     0 × global.set     0 total
+  #1 f64
+     import: global.NaN
+       3 × global.get     0 × global.set     3 total (100/0% split)
+  #2 f64
+     import: global.Infinity
+       1 × global.get     0 × global.set     1 total (100/0% split)
+  #3 i32
+     init: i32.const 58064
+     289 × global.get   396 × global.set   685 total (42/58% split)
+
+Likely the stack pointer:       Global #3
+Functions using stack pointer:  143 (26.98% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.19%) × [96]
+    1  (0.19%) × [112]
+    1  (0.19%) × [128]
+    1  (0.19%) × [160]
+    1  (0.19%) × [176]
+    1  (0.19%) × [224]
+    1  (0.19%) × [288]
+    1  (0.19%) × [304]
+    1  (0.19%) × [368]
+    1  (0.19%) × [512]
+    1  (0.19%) × [560]
+    1  (0.19%) × [576, 16]
+    1  (0.19%) × [688]
+    1  (0.19%) × [832]
+    1  (0.19%) × [1136]
+    1  (0.19%) × [2208]
+    1  (0.19%) × [4048]
+    1  (0.19%) × [40064]
+    1  (0.19%) × [49200]
+    2  (0.38%) × [1024]
+    3  (0.57%) × [208]
+    4  (0.75%) × [144]
+    5  (0.94%) × [240]
+    5  (0.94%) × [256]
+    7  (1.32%) × [80]
+    8  (1.51%) × [64]
+   13  (2.45%) × [48]
+   23  (4.34%) × [32]
+   53 (10.00%) × [16]
+  388 (73.21%) × []
+  functions with stack allocation total: 142 (26.79%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[96]",96,96
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[112]",112,112
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[128]",128,128
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[160]",160,160
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[176]",176,176
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[224]",224,224
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[288]",288,288
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[304]",304,304
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[368]",368,368
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[512]",512,512
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[560]",560,560
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[576, 16]",592,592
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[688]",688,688
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[832]",832,832
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[1136]",1136,1136
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[2208]",2208,2208
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[4048]",4048,4048
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[40064]",40064,40064
+sp_csv_line:"","ldecod_r.wasm",1,0.18867925,"[49200]",49200,49200
+sp_csv_line:"","ldecod_r.wasm",2,0.3773585,"[1024]",1024,1024
+sp_csv_line:"","ldecod_r.wasm",3,0.5660377,"[208]",208,208
+sp_csv_line:"","ldecod_r.wasm",4,0.754717,"[144]",144,144
+sp_csv_line:"","ldecod_r.wasm",5,0.9433962,"[240]",240,240
+sp_csv_line:"","ldecod_r.wasm",5,0.9433962,"[256]",256,256
+sp_csv_line:"","ldecod_r.wasm",7,1.3207548,"[80]",80,80
+sp_csv_line:"","ldecod_r.wasm",8,1.509434,"[64]",64,64
+sp_csv_line:"","ldecod_r.wasm",13,2.45283,"[48]",48,48
+sp_csv_line:"","ldecod_r.wasm",23,4.3396225,"[32]",32,32
+sp_csv_line:"","ldecod_r.wasm",53,10,"[16]",16,16
+sp_csv_line:"","ldecod_r.wasm",388,73.20755,"[]",0,0
+
+Counts of function types (33 unique types):
+    1  (0.18%) × [i32, i32] -> [i64]
+    1  (0.18%) × [i32, i32] -> [f64]
+    1  (0.18%) × [i32, i32, i32, i32] -> [f64]
+    1  (0.18%) × [i32, i32, i32, i32, i32] -> [f64]
+    1  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.18%) × [i32, i32, i64] -> []
+    1  (0.18%) × [i32, i64] -> []
+    1  (0.18%) × [i64, i32, i32] -> [i32]
+    2  (0.36%) × [i32] -> [i64]
+    2  (0.36%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    2  (0.36%) × [i64, i32] -> [i32]
+    2  (0.36%) × [f64] -> [f64]
+    2  (0.36%) × [f64, f64] -> [f64]
+    3  (0.54%) × [f64, i32] -> [f64]
+    4  (0.73%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    4  (0.73%) × [i32, i32, i32, i32, i32, i32, i32] -> []
+    4  (0.73%) × [i32, i64, i32] -> [i64]
+    5  (0.91%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    5  (0.91%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    6  (1.09%) × [] -> []
+    6  (1.09%) × [i32, i32, i32, i32, i32] -> [i32]
+   11  (2.00%) × [] -> [i32]
+   17  (3.09%) × [i32, i32, i32, i32] -> [i32]
+   17  (3.09%) × [i32, i32, i32, i32, i32] -> []
+   18  (3.27%) × [i32, i32, i32, i32, i32, i32] -> []
+   38  (6.90%) × [i32, i32, i32] -> [i32]
+   39  (7.08%) × [i32] -> [i32]
+   40  (7.26%) × [i32, i32, i32, i32] -> []
+   56 (10.16%) × [i32, i32] -> [i32]
+   70 (12.70%) × [i32, i32, i32] -> []
+   83 (15.06%) × [i32, i32] -> []
+  106 (19.24%) × [i32] -> []
+
+Functions with at least one call_indirect: 68 (12.83% of all functions)
+
+Table elements initialization:
+         range: [    0,    7]   length:   8   unique funcs:    5   type: [i32] -> [i32]
+         range: [    8,    9]   length:   2   unique funcs:    2   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [   10,   41]   length:  32   unique funcs:   12   type: [i32, i32] -> [i32]
+         range: [   42,   57]   length:  16   unique funcs:    9   type: [i32, i32, i32] -> [i32]
+         range: [   58,   65]   length:   8   unique funcs:    5   type: [i32, i32, i32, i32] -> [i32]
+         range: [   66,   69]   length:   4   unique funcs:    4   type: [i32, i32, i32, i32, i32] -> [i32]
+         range: [   70,   73]   length:   4   unique funcs:    3   type: [i32, i64, i32] -> [i64]
+         range: [   74,  105]   length:  32   unique funcs:   30   type: [i32] -> []
+         range: [  106,  109]   length:   4   unique funcs:    4   type: [i32, i32] -> []
+         range: [  110,  141]   length:  32   unique funcs:   19   type: [i32, i32, i32] -> []
+         range: [  142,  157]   length:  16   unique funcs:   15   type: [i32, i32, i32, i32] -> []
+         range: [  158,  165]   length:   8   unique funcs:    7   type: [i32, i32, i32, i32, i32] -> []
+         range: [  166,  181]   length:  16   unique funcs:    9   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  182,  189]   length:   8   unique funcs:    5   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+  14 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × range: [    0,    7]   length:   8   source:   i32.load   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               39
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     4 × range: [    0,    7]   length:   8   source: local.(get|tee)   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               39
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     1 × fixed index:      9                  source:  i32.const   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              1
+     9 × range: [   10,   41]   length:  32   source: local.(get|tee)   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               56
+         functions matching by type and present in table (regardless at which table index):   12
+         functions matching by type and present in permissable table index range:             12
+     3 × range: [   42,   57]   length:  16   source:   i32.load   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               38
+         functions matching by type and present in table (regardless at which table index):    9
+         functions matching by type and present in permissable table index range:              9
+    90 × range: [   42,   57]   length:  16   source: local.(get|tee)   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               38
+         functions matching by type and present in table (regardless at which table index):    9
+         functions matching by type and present in permissable table index range:              9
+     5 × range: [   58,   65]   length:   8   source:   i32.load   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               17
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     1 × range: [   58,   65]   length:   8   source: local.(get|tee)   type: [i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               17
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     2 × range: [   66,   69]   length:   4   source: local.(get|tee)   type: [i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                6
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × range: [   70,   73]   length:   4   source:   i32.load   type: [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     2 × range: [   70,   73]   length:   4   source: local.(get|tee)   type: [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+    17 × range: [   74,  105]   length:  32   source: local.(get|tee)   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):              106
+         functions matching by type and present in table (regardless at which table index):   30
+         functions matching by type and present in permissable table index range:             30
+     1 × range: [  106,  109]   length:   4   source: local.(get|tee)   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               83
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × fixed index:    109                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               83
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              1
+     1 × range: [  110,  141]   length:  32   source:   i32.load   type: [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               70
+         functions matching by type and present in table (regardless at which table index):   19
+         functions matching by type and present in permissable table index range:             19
+     2 × range: [  110,  141]   length:  32   source: local.(get|tee)   type: [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               70
+         functions matching by type and present in table (regardless at which table index):   19
+         functions matching by type and present in permissable table index range:             19
+     1 × offset:  +142                        source: local.(get|tee)   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):   15
+         functions matching by type and present in permissable table index range:             15
+    20 × range: [  142,  157]   length:  16   source:   i32.load   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):   15
+         functions matching by type and present in permissable table index range:             15
+    25 × range: [  142,  157]   length:  16   source: local.(get|tee)   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):   15
+         functions matching by type and present in permissable table index range:             15
+     8 × range: [  158,  165]   length:   8   source:   i32.load   type: [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               17
+         functions matching by type and present in table (regardless at which table index):    7
+         functions matching by type and present in permissable table index range:              7
+   135 × range: [  158,  165]   length:   8   source: local.(get|tee)   type: [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               17
+         functions matching by type and present in table (regardless at which table index):    7
+         functions matching by type and present in permissable table index range:              7
+    15 × range: [  166,  181]   length:  16   source: local.(get|tee)   type: [i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               18
+         functions matching by type and present in table (regardless at which table index):    9
+         functions matching by type and present in permissable table index range:              9
+     5 × range: [  182,  189]   length:   8   source:   i32.load   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                5
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     4 × range: [  182,  189]   length:   8   source: local.(get|tee)   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                5
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+  24 call_indirect patterns in total
+
+function #9 is indirectly called with a fixed table index
+  global.get 3
+  local.set 21
+  global.get 3
+  ...
+function #109 is indirectly called with a fixed table index
+  local.get 1
+  i32.load
+  i32.const 7
+  ...
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  class #0
+    type: [i32] -> [i32]
+    start idx: Some(0), end idx: Some(7)
+    size (of class): 5
+    count (how often class appears): 1
+  class #1
+    type: [i32, f64, i32, i32, i32, i32] -> [i32]
+    start idx: Some(9), end idx: Some(9)
+    size (of class): 1
+    count (how often class appears): 1
+  class #2
+    type: [i32, i32, i32, i32] -> [i32]
+    start idx: Some(58), end idx: Some(65)
+    size (of class): 5
+    count (how often class appears): 1
+  class #3
+    type: [i32, i64, i32] -> [i64]
+    start idx: Some(70), end idx: Some(73)
+    size (of class): 3
+    count (how often class appears): 1
+  class #4
+    type: [i32, i32] -> []
+    start idx: Some(106), end idx: Some(109)
+    size (of class): 4
+    count (how often class appears): 1
+  class #5
+    type: [i32, i32] -> []
+    start idx: Some(109), end idx: Some(109)
+    size (of class): 1
+    count (how often class appears): 1
+  class #6
+    type: [i32, i32, i32] -> []
+    start idx: Some(110), end idx: Some(141)
+    size (of class): 19
+    count (how often class appears): 1
+  class #7
+    type: [i32, i32, i32, i32] -> []
+    start idx: Some(142), end idx: None
+    size (of class): 15
+    count (how often class appears): 1
+  class #8
+    type: [i32, i32, i32, i32, i32] -> [i32]
+    start idx: Some(66), end idx: Some(69)
+    size (of class): 4
+    count (how often class appears): 2
+  class #9
+    type: [i32, i64, i32] -> [i64]
+    start idx: Some(70), end idx: Some(73)
+    size (of class): 3
+    count (how often class appears): 2
+  class #10
+    type: [i32, i32, i32] -> []
+    start idx: Some(110), end idx: Some(141)
+    size (of class): 19
+    count (how often class appears): 2
+  class #11
+    type: [i32, i32, i32] -> [i32]
+    start idx: Some(42), end idx: Some(57)
+    size (of class): 9
+    count (how often class appears): 3
+  class #12
+    type: [i32] -> [i32]
+    start idx: Some(0), end idx: Some(7)
+    size (of class): 5
+    count (how often class appears): 4
+  class #13
+    type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(182), end idx: Some(189)
+    size (of class): 5
+    count (how often class appears): 4
+  class #14
+    type: [i32, i32, i32, i32] -> [i32]
+    start idx: Some(58), end idx: Some(65)
+    size (of class): 5
+    count (how often class appears): 5
+  class #15
+    type: [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(182), end idx: Some(189)
+    size (of class): 5
+    count (how often class appears): 5
+  class #16
+    type: [i32, i32, i32, i32, i32] -> []
+    start idx: Some(158), end idx: Some(165)
+    size (of class): 7
+    count (how often class appears): 8
+  class #17
+    type: [i32, i32] -> [i32]
+    start idx: Some(10), end idx: Some(41)
+    size (of class): 12
+    count (how often class appears): 9
+  class #18
+    type: [i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(166), end idx: Some(181)
+    size (of class): 9
+    count (how often class appears): 15
+  class #19
+    type: [i32] -> []
+    start idx: Some(74), end idx: Some(105)
+    size (of class): 30
+    count (how often class appears): 17
+  class #20
+    type: [i32, i32, i32, i32] -> []
+    start idx: Some(142), end idx: Some(157)
+    size (of class): 15
+    count (how often class appears): 20
+  class #21
+    type: [i32, i32, i32, i32] -> []
+    start idx: Some(142), end idx: Some(157)
+    size (of class): 15
+    count (how often class appears): 25
+  class #22
+    type: [i32, i32, i32] -> [i32]
+    start idx: Some(42), end idx: Some(57)
+    size (of class): 9
+    count (how often class appears): 90
+  class #23
+    type: [i32, i32, i32, i32, i32] -> []
+    start idx: Some(158), end idx: Some(165)
+    size (of class): 7
+    count (how often class appears): 135
+
+latex CFI table line for this program:  & C & 233.0\kern.5ptk\kern1pt & 354 & 8.6\% & 551 & 129 & 23.4\% & 68 & 12.3\% & 24 & 1 & 135 & 14.8 \\
+cfi_latex_csv_sum_avg_line:,233043,3776,354,551,129,68,24,1,135,14.75,4
+benchmark,binary,class,size,count,source
+cfi_csv_line:"","ldecod_r.wasm",0,5,1,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",1,1,1,"i32.const"
+cfi_csv_line:"","ldecod_r.wasm",2,5,1,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",3,3,1,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",4,4,1,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",5,1,1,"i32.const"
+cfi_csv_line:"","ldecod_r.wasm",6,19,1,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",7,15,1,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",8,4,2,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",9,3,2,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",10,19,2,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",11,9,3,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",12,5,4,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",13,5,4,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",14,5,5,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",15,5,5,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",16,7,8,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",17,12,9,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",18,9,15,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",19,30,17,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",20,15,20,"i32.load"
+cfi_csv_line:"","ldecod_r.wasm",21,15,25,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",22,9,90,"local.(get|tee)"
+cfi_csv_line:"","ldecod_r.wasm",23,7,135,"local.(get|tee)"
+total classes: 24

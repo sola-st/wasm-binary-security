@@ -1,0 +1,9 @@
+  in main()
+  in intermediate()
+  in leaf()
+    global const string, addr: 0x1000e0 (1048800)
+    stack-allocated (local) string, addr: 0xfff58 (1048408)
+    stack value in leaf() function, addr: 0xfff08 (1048328)
+    stack grows: -80
+    dynamically (heap) allocated string, addr: 0x1104f0 (1115376)
+    arg 0: rust-wasi.wasm, addr: 0x110530 (1115440)

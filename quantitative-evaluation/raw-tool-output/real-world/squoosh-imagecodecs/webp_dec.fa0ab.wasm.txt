@@ -1,0 +1,323 @@
+filename: ./squoosh-imagecodecs/webp_dec.fa0ab.wasm
+  benchmark: squoosh-imagecodecs
+  binary:    webp_dec.fa0ab.wasm
+
+Functions:       563
+  Imported:       29
+  Non-imported:  534
+  Exported:       20
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:       222
+  Of those, unique functions:  160 (i.e., at least 28.42% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:     43407
+  call:            1200 (2.76% of all instructions)
+  call_indirect:     69 (0.16% of all, 5.44% of all calls)
+
+Globals:
+  #0 i32
+     import: env.__table_base
+       0 × global.get     0 × global.set     0 total
+  #1 i32
+     import: env.a
+       0 × global.get     0 × global.set     0 total
+  #2 i32
+     import: env.b
+       0 × global.get     0 × global.set     0 total
+  #3 i32
+     init: global.get 1
+       3 × global.get     0 × global.set     3 total (100/0% split)
+  #4 i32
+     init: global.get 2
+     116 × global.get   120 × global.set   236 total (49/51% split)
+
+Likely the stack pointer:       Global #4
+Functions using stack pointer:   58 (10.86% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.19%) × [224]
+    1  (0.19%) × [512]
+    1  (0.19%) × [1024]
+    2  (0.37%) × [256]
+    2  (0.37%) × [560]
+    3  (0.56%) × [80]
+    3  (0.56%) × [144]
+    4  (0.75%) × [48]
+    5  (0.94%) × [32]
+    7  (1.31%) × [64]
+   29  (5.43%) × [16]
+  476 (89.14%) × []
+  functions with stack allocation total: 58 (10.86%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",1,0.18726592,"[224]",224,224
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",1,0.18726592,"[512]",512,512
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",1,0.18726592,"[1024]",1024,1024
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",2,0.37453184,"[256]",256,256
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",2,0.37453184,"[560]",560,560
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",3,0.56179774,"[80]",80,80
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",3,0.56179774,"[144]",144,144
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",4,0.7490637,"[48]",48,48
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",5,0.9363296,"[32]",32,32
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",7,1.3108615,"[64]",64,64
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",29,5.4307117,"[16]",16,16
+sp_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",476,89.13858,"[]",0,0
+
+Counts of function types (26 unique types):
+    1  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.18%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.18%) × [i32, i32, i32, i64] -> []
+    1  (0.18%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    1  (0.18%) × [i64, i32, i32] -> [i32]
+    1  (0.18%) × [f64, i32] -> [f64]
+    2  (0.36%) × [i32, i32, i32, i32] -> [i64]
+    2  (0.36%) × [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    3  (0.53%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    4  (0.71%) × [i32, i32, i32, i32, i32, i32, i32] -> []
+    5  (0.89%) × [i64, i32] -> [i32]
+    8  (1.42%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    9  (1.60%) × [] -> [i32]
+    9  (1.60%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+   14  (2.49%) × [i32, i32, i32, i32, i32] -> [i32]
+   15  (2.66%) × [i32, i32, i32, i32, i32, i32] -> []
+   16  (2.84%) × [i32, i32, i32, i32] -> [i32]
+   22  (3.91%) × [] -> []
+   40  (7.10%) × [i32, i32, i32] -> []
+   40  (7.10%) × [i32, i32, i32, i32, i32] -> []
+   42  (7.46%) × [i32, i32] -> []
+   46  (8.17%) × [i32, i32, i32, i32] -> []
+   51  (9.06%) × [i32, i32, i32] -> [i32]
+   55  (9.77%) × [i32] -> [i32]
+   82 (14.56%) × [i32] -> []
+   92 (16.34%) × [i32, i32] -> [i32]
+
+Functions with at least one call_indirect: 50 (9.36% of all functions)
+
+Table elements initialization:
+         range: [    0,    1]   length:   2   unique funcs:    2   type: [] -> [i32]
+         range: [    2,    9]   length:   8   unique funcs:    8   type: [i32] -> [i32]
+         range: [   10,   41]   length:  32   unique funcs:   26   type: [i32, i32] -> [i32]
+         range: [   42,   57]   length:  16   unique funcs:   13   type: [i32, i32, i32] -> [i32]
+         range: [   58,   59]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         range: [   60,   61]   length:   2   unique funcs:    2   type: [i32, i32, i32, i32] -> [i64]
+         range: [   62,   65]   length:   4   unique funcs:    4   type: [] -> []
+         range: [   66,  129]   length:  64   unique funcs:   35   type: [i32] -> []
+         range: [  130,  133]   length:   4   unique funcs:    4   type: [i32, i32] -> []
+         range: [  134,  141]   length:   8   unique funcs:    5   type: [i32, i32, i32] -> []
+         range: [  142,  173]   length:  32   unique funcs:   23   type: [i32, i32, i32, i32] -> []
+         range: [  174,  205]   length:  32   unique funcs:   22   type: [i32, i32, i32, i32, i32] -> []
+         range: [  206,  213]   length:   8   unique funcs:    6   type: [i32, i32, i32, i32, i32, i32] -> []
+         range: [  214,  221]   length:   8   unique funcs:    8   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+  14 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     2 × range: [    0,    1]   length:   2   source: local.(get|tee)   type: [] -> [i32]
+         functions matching by type (regardless whether they are in the table):                9
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     4 × range: [    2,    9]   length:   8   source:   i32.load   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               55
+         functions matching by type and present in table (regardless at which table index):    8
+         functions matching by type and present in permissable table index range:              8
+     4 × range: [    2,    9]   length:   8   source: local.(get|tee)   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               55
+         functions matching by type and present in table (regardless at which table index):    8
+         functions matching by type and present in permissable table index range:              8
+     3 × range: [   10,   41]   length:  32   source: local.(get|tee)   type: [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               92
+         functions matching by type and present in table (regardless at which table index):   26
+         functions matching by type and present in permissable table index range:             26
+     1 × range: [   42,   57]   length:  16   source:   i32.load   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               51
+         functions matching by type and present in table (regardless at which table index):   13
+         functions matching by type and present in permissable table index range:             13
+     7 × range: [   42,   57]   length:  16   source: local.(get|tee)   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               51
+         functions matching by type and present in table (regardless at which table index):   13
+         functions matching by type and present in permissable table index range:             13
+     4 × range: [   58,   59]   length:   2   source: local.(get|tee)   type: [i32, i32, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                8
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × range: [   60,   61]   length:   2   source: local.(get|tee)   type: [i32, i32, i32, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     2 × range: [   62,   65]   length:   4   source: local.(get|tee)   type: [] -> []
+         functions matching by type (regardless whether they are in the table):               22
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     3 × range: [   66,  129]   length:  64   source:   i32.load   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):               82
+         functions matching by type and present in table (regardless at which table index):   35
+         functions matching by type and present in permissable table index range:             35
+     6 × range: [   66,  129]   length:  64   source: local.(get|tee)   type: [i32] -> []
+         functions matching by type (regardless whether they are in the table):               82
+         functions matching by type and present in table (regardless at which table index):   35
+         functions matching by type and present in permissable table index range:             35
+     5 × range: [  130,  133]   length:   4   source: local.(get|tee)   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               42
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × range: [  134,  141]   length:   8   source: local.(get|tee)   type: [i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     1 × range: [  142,  173]   length:  32   source:   i32.load   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               46
+         functions matching by type and present in table (regardless at which table index):   23
+         functions matching by type and present in permissable table index range:             23
+     9 × range: [  142,  173]   length:  32   source: local.(get|tee)   type: [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               46
+         functions matching by type and present in table (regardless at which table index):   23
+         functions matching by type and present in permissable table index range:             23
+     1 × range: [  174,  205]   length:  32   source:   i32.load   type: [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):   22
+         functions matching by type and present in permissable table index range:             22
+     5 × range: [  174,  205]   length:  32   source: local.(get|tee)   type: [i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               40
+         functions matching by type and present in table (regardless at which table index):   22
+         functions matching by type and present in permissable table index range:             22
+     1 × range: [  206,  213]   length:   8   source:   i32.load   type: [i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               15
+         functions matching by type and present in table (regardless at which table index):    6
+         functions matching by type and present in permissable table index range:              6
+     4 × range: [  206,  213]   length:   8   source: local.(get|tee)   type: [i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               15
+         functions matching by type and present in table (regardless at which table index):    6
+         functions matching by type and present in permissable table index range:              6
+     5 × range: [  214,  221]   length:   8   source: local.(get|tee)   type: [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                9
+         functions matching by type and present in table (regardless at which table index):    8
+         functions matching by type and present in permissable table index range:              8
+  20 call_indirect patterns in total
+
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  class #0
+    type: [i32, i32, i32] -> [i32]
+    start idx: Some(42), end idx: Some(57)
+    size (of class): 13
+    count (how often class appears): 1
+  class #1
+    type: [i32, i32, i32, i32] -> [i64]
+    start idx: Some(60), end idx: Some(61)
+    size (of class): 2
+    count (how often class appears): 1
+  class #2
+    type: [i32, i32, i32] -> []
+    start idx: Some(134), end idx: Some(141)
+    size (of class): 5
+    count (how often class appears): 1
+  class #3
+    type: [i32, i32, i32, i32] -> []
+    start idx: Some(142), end idx: Some(173)
+    size (of class): 23
+    count (how often class appears): 1
+  class #4
+    type: [i32, i32, i32, i32, i32] -> []
+    start idx: Some(174), end idx: Some(205)
+    size (of class): 22
+    count (how often class appears): 1
+  class #5
+    type: [i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(206), end idx: Some(213)
+    size (of class): 6
+    count (how often class appears): 1
+  class #6
+    type: [] -> [i32]
+    start idx: Some(0), end idx: Some(1)
+    size (of class): 2
+    count (how often class appears): 2
+  class #7
+    type: [] -> []
+    start idx: Some(62), end idx: Some(65)
+    size (of class): 4
+    count (how often class appears): 2
+  class #8
+    type: [i32, i32] -> [i32]
+    start idx: Some(10), end idx: Some(41)
+    size (of class): 26
+    count (how often class appears): 3
+  class #9
+    type: [i32] -> []
+    start idx: Some(66), end idx: Some(129)
+    size (of class): 35
+    count (how often class appears): 3
+  class #10
+    type: [i32] -> [i32]
+    start idx: Some(2), end idx: Some(9)
+    size (of class): 8
+    count (how often class appears): 4
+  class #11
+    type: [i32] -> [i32]
+    start idx: Some(2), end idx: Some(9)
+    size (of class): 8
+    count (how often class appears): 4
+  class #12
+    type: [i32, i32, i32, i32, i32, i32] -> [i32]
+    start idx: Some(58), end idx: Some(59)
+    size (of class): 2
+    count (how often class appears): 4
+  class #13
+    type: [i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(206), end idx: Some(213)
+    size (of class): 6
+    count (how often class appears): 4
+  class #14
+    type: [i32, i32] -> []
+    start idx: Some(130), end idx: Some(133)
+    size (of class): 4
+    count (how often class appears): 5
+  class #15
+    type: [i32, i32, i32, i32, i32] -> []
+    start idx: Some(174), end idx: Some(205)
+    size (of class): 22
+    count (how often class appears): 5
+  class #16
+    type: [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    start idx: Some(214), end idx: Some(221)
+    size (of class): 8
+    count (how often class appears): 5
+  class #17
+    type: [i32] -> []
+    start idx: Some(66), end idx: Some(129)
+    size (of class): 35
+    count (how often class appears): 6
+  class #18
+    type: [i32, i32, i32] -> [i32]
+    start idx: Some(42), end idx: Some(57)
+    size (of class): 13
+    count (how often class appears): 7
+  class #19
+    type: [i32, i32, i32, i32] -> []
+    start idx: Some(142), end idx: Some(173)
+    size (of class): 23
+    count (how often class appears): 9
+
+latex CFI table line for this program: squoosh-imagecodecs & C++ & 43.4\kern.5ptk\kern1pt & 69 & 5.4\% & 563 & 160 & 28.4\% & 107 & 19.0\% & 20 & 1 & 9 & 3.5 \\
+cfi_latex_csv_sum_avg_line:squoosh-imagecodecs,43407,1200,69,563,160,107,20,1,9,3.45,4
+benchmark,binary,class,size,count,source
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",0,13,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",1,2,1,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",2,5,1,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",3,23,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",4,22,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",5,6,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",6,2,2,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",7,4,2,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",8,26,3,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",9,35,3,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",10,8,4,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",11,8,4,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",12,2,4,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",13,6,4,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",14,4,5,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",15,22,5,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",16,8,5,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",17,35,6,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",18,13,7,"local.(get|tee)"
+cfi_csv_line:"squoosh-imagecodecs","webp_dec.fa0ab.wasm",19,23,9,"local.(get|tee)"
+total classes: 20

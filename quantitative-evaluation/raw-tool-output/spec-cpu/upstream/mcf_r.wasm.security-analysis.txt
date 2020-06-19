@@ -1,0 +1,182 @@
+filename: ./505.mcf_r/mcf_r.wasm
+  benchmark: 505.mcf_r
+  binary:    mcf_r.wasm
+
+Functions:       136
+  Imported:       12
+  Non-imported:  124
+  Exported:        5
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:        12
+  Of those, unique functions:   12 (i.e., at least 8.82% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:     27418
+  call:             457 (1.67% of all instructions)
+  call_indirect:     44 (0.16% of all, 8.78% of all calls)
+
+Globals:
+  #0 i32
+     init: i32.const 5248800
+     47 × global.get   92 × global.set  139 total (34/66% split)
+
+Likely the stack pointer:       Global #0
+Functions using stack pointer:   47 (37.90% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.81%) × [-16288]
+    1  (0.81%) × [-8960]
+    1  (0.81%) × [-560]
+    1  (0.81%) × [-432]
+    1  (0.81%) × [-304]
+    1  (0.81%) × [-272]
+    1  (0.81%) × [-256]
+    1  (0.81%) × [-208]
+    1  (0.81%) × [-192]
+    1  (0.81%) × [-160]
+    1  (0.81%) × [-144]
+    1  (0.81%) × [-128]
+    2  (1.61%) × [-112]
+    2  (1.61%) × [-96]
+    2  (1.61%) × [-80]
+    2  (1.61%) × [-48]
+    5  (4.03%) × [-32]
+   20 (16.13%) × [-16]
+   79 (63.71%) × []
+  functions with stack allocation total: 45 (36.29%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-16288]",-16288,16288
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-8960]",-8960,8960
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-560]",-560,560
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-432]",-432,432
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-304]",-304,304
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-272]",-272,272
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-256]",-256,256
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-208]",-208,208
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-192]",-192,192
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-160]",-160,160
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-144]",-144,144
+sp_csv_line:"505.mcf_r","mcf_r.wasm",1,0.8064516,"[-128]",-128,128
+sp_csv_line:"505.mcf_r","mcf_r.wasm",2,1.6129032,"[-112]",-112,112
+sp_csv_line:"505.mcf_r","mcf_r.wasm",2,1.6129032,"[-96]",-96,96
+sp_csv_line:"505.mcf_r","mcf_r.wasm",2,1.6129032,"[-80]",-80,80
+sp_csv_line:"505.mcf_r","mcf_r.wasm",2,1.6129032,"[-48]",-48,48
+sp_csv_line:"505.mcf_r","mcf_r.wasm",5,4.032258,"[-32]",-32,32
+sp_csv_line:"505.mcf_r","mcf_r.wasm",20,16.129032,"[-16]",-16,16
+sp_csv_line:"505.mcf_r","mcf_r.wasm",79,63.70968,"[]",0,0
+
+Counts of function types (41 unique types):
+    1  (0.74%) × [] -> [f64]
+    1  (0.74%) × [i32] -> [f64]
+    1  (0.74%) × [i32, i32] -> [i64]
+    1  (0.74%) × [i32, i32, i32, i32, i32, i32] -> []
+    1  (0.74%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.74%) × [i32, i32, i32, i32, i32, i64, i64] -> [i32]
+    1  (0.74%) × [i32, i32, i32, i64, i64, i64, i64] -> []
+    1  (0.74%) × [i32, i32, i64] -> []
+    1  (0.74%) × [i32, i64] -> []
+    1  (0.74%) × [i32, i64] -> [i64]
+    1  (0.74%) × [i32, i64, i64] -> []
+    1  (0.74%) × [i32, f32] -> []
+    1  (0.74%) × [i32, f64] -> []
+    1  (0.74%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    1  (0.74%) × [i64] -> []
+    1  (0.74%) × [i64] -> [i64]
+    1  (0.74%) × [i64, i32, i32] -> [i32]
+    1  (0.74%) × [i64, i64] -> [f32]
+    1  (0.74%) × [i64, i64] -> [f64]
+    1  (0.74%) × [i64, i64, i64, i64] -> [i32]
+    1  (0.74%) × [i64, i64, i64, i64, i32, i32, i32, i32, i32, i32, i64, i64] -> []
+    1  (0.74%) × [f64, i32] -> [f64]
+    2  (1.47%) × [] -> [i32]
+    2  (1.47%) × [i32] -> [i64]
+    2  (1.47%) × [i32, i32, i32, i32] -> []
+    2  (1.47%) × [i32, i32, i32, i32, i32] -> []
+    2  (1.47%) × [i32, i32, i32, i32, i32] -> [i32]
+    2  (1.47%) × [i32, i64, i32] -> [i64]
+    2  (1.47%) × [i64, i32] -> [i32]
+    2  (1.47%) × [i64, i64] -> [i32]
+    3  (2.21%) × [i32, i32, i32, i32] -> [i32]
+    3  (2.21%) × [i32, i64, i64, i32] -> []
+    4  (2.94%) × [] -> [i64]
+    6  (4.41%) × [i32, i64, i64, i64, i64] -> []
+    7  (5.15%) × [i32, i32, i32] -> []
+    8  (5.88%) × [i32] -> []
+   10  (7.35%) × [] -> []
+   10  (7.35%) × [i32, i32] -> []
+   13  (9.56%) × [i32, i32, i32] -> [i32]
+   16 (11.76%) × [i32, i32] -> [i32]
+   18 (13.24%) × [i32] -> [i32]
+
+Functions with at least one call_indirect: 12 (9.68% of all functions)
+
+Table elements initialization:
+         range: [    1,    1]   length:   1   unique funcs:    1   type: [i32, i64] -> [i64]
+         range: [    2,    3]   length:   2   unique funcs:    2   type: [i32, i32] -> [i32]
+         range: [    4,    4]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [    5,    5]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+         range: [    6,    6]   length:   1   unique funcs:    1   type: [i32, i64, i32] -> [i64]
+         range: [    7,    7]   length:   1   unique funcs:    1   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [    8,    9]   length:   2   unique funcs:    2   type: [i32, i32, i32] -> [i32]
+         range: [   10,   10]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   11,   11]   length:   1   unique funcs:    1   type: [i32, i64, i32] -> [i64]
+         range: [   12,   12]   length:   1   unique funcs:    1   type: [i32, i32, i32] -> [i32]
+  10 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × unrestricted                         source:   i32.load   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               18
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+    28 × unrestricted                         source: local.(get|tee)   type [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               16
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     7 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               13
+         functions matching by type and present in table (regardless at which table index):    4
+         functions matching by type and present in permissable table index range:              4
+     1 × unrestricted                         source:   i32.load   type [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+     1 × unrestricted                         source: local.(get|tee)   type [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+     1 × fixed index:      0                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               10
+         functions matching by type and present in table (regardless at which table index):    0
+         functions matching by type and present in permissable table index range:              0
+     5 × fixed index:      1                  source:  i32.const   type: [i32, i64] -> [i64]
+         functions matching by type (regardless whether they are in the table):                1
+         functions matching by type and present in table (regardless at which table index):    1
+         functions matching by type and present in permissable table index range:              1
+  7 call_indirect patterns in total
+
+function #1 is indirectly called with a fixed table index
+  local.get 1
+  end
+  ...
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32, i32] -> [], start idx: Some(0), end idx: Some(0), size (of class): 0, count (how often class appears: 1
+  type: [i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 4, count (how often class appears: 7
+  type: [i32, i64, i32] -> [i64], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 1
+  type: [i32, i64] -> [i64], start idx: Some(1), end idx: Some(1), size (of class): 1, count (how often class appears: 5
+  type: [i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 2, count (how often class appears: 28
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: None, end idx: None, size (of class): 1, count (how often class appears: 1
+
+latex CFI table line for this program: 505.mcf & C & 27.4\kern.5ptk\kern1pt & 44 & 8.8\% & 136 & 12 & 8.8\% & 8 & 5.9\% & 7 & 1 & 28 & 6.3 & 1 \\
+cfi_latex_csv_sum_avg_line:505.mcf,27418,457,44,136,12,8,7,1,28,6.285714285714286,1
+benchmark,binary,class,size,count,source
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",0,0,1,"i32.const"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",1,2,1,"i32.load"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",2,4,7,"i32.load"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",3,2,1,"i32.load"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",4,1,5,"i32.const"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",5,2,28,"local.(get|tee)"
+cfi_csv_line:"505.mcf_r","mcf_r.wasm",6,1,1,"local.(get|tee)"
+total classes: 7

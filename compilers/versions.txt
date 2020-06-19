@@ -1,0 +1,11 @@
+- emscripten, installed with emsdk on 2020-02-05
+    * emcc --version: 1.39.7
+    * ./emsdk install latest: upstream llvm backend
+    * ./emsdk install latest-fastcomp: legacy fastcomp backend
+- clang, installed from wasi-sdk on 2020-01-09
+    * ./wasi-sdk-8.0-linux/wasi-sdk-8.0/bin/clang --version: 9.0.0
+- rustc, installed via rustup, update from 2020-01-30
+    * rustc --version: 1.41.0 (5e1a79984 2020-01-27)
+    * rustc +nightly --version: 1.43.0-nightly (c9290dcee 2020-02-04)
+    * wasm32-wasi backend
+    * wasm32-unknown-emscripten backend

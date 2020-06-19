@@ -1,0 +1,9 @@
+  in main()
+  in intermediate()
+  in leaf()
+    global const string, addr: 0x400 (1024)
+    stack-allocated (local) string, addr: 0x500e30 (5246512)
+    stack value in leaf() function, addr: 0x500e2c (5246508)
+    stack grows: -4
+    dynamically (heap) allocated string, addr: 0x500f88 (5246856)
+    argv[0]: /mnt/Data/Documents/SOLA/WebAssembly/security/evaluations/memory-layout/emcc-upstream.js, addr: 0x500e70 (5246576)

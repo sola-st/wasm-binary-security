@@ -1,0 +1,130 @@
+filename: ./squoosh-imagecodecs/hqx-rs-8c087e0290bb39f1e090.module.wasm
+  benchmark: squoosh-imagecodecs
+  binary:    hqx-rs-8c087e0290bb39f1e090.module.wasm
+
+Functions:        73
+  Imported:        0
+  Non-imported:   73
+  Exported:        4
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:        24
+  Of those, unique functions:   17 (i.e., at least 23.29% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Instructions:    111437
+  call:            5891 (5.29% of all instructions)
+  call_indirect:     34 (0.03% of all, 0.57% of all calls)
+
+Globals:
+  #0 i32
+     init: i32.const 1048576
+     29 × global.get   48 × global.set   77 total (38/62% split)
+
+Likely the stack pointer:       Global #0
+Functions using stack pointer:   29 (39.73% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    2  (2.74%) × [-128]
+    2  (2.74%) × [-112]
+    4  (5.48%) × [-64]
+    6  (8.22%) × [-32]
+    6  (8.22%) × [-16]
+    9 (12.33%) × [-48]
+   44 (60.27%) × []
+  functions with stack allocation total: 29 (39.73%)
+
+csv lines to extract for sp analysis and plots:
+benchmark,binary,funccount,percent,sp_increments,increment_sum,increment_sum_abs
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",2,2.739726,"[-128]",-128,128
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",2,2.739726,"[-112]",-112,112
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",4,5.479452,"[-64]",-64,64
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",6,8.219178,"[-32]",-32,32
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",6,8.219178,"[-16]",-16,16
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",9,12.328767,"[-48]",-48,48
+sp_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",44,60.27397,"[]",0,0
+
+Counts of function types (16 unique types):
+    1  (1.37%) × [] -> [i32]
+    1  (1.37%) × [i32] -> [i64]
+    1  (1.37%) × [i32, i32, i32, i32] -> [i32]
+    1  (1.37%) × [i32, i32, i32, i32, i32, i32] -> []
+    1  (1.37%) × [i64, i32] -> [i32]
+    2  (2.74%) × [i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    3  (4.11%) × [i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    4  (5.48%) × [i32, i32, i32, i32] -> []
+    4  (5.48%) × [i32, i32, i32, i32, i32] -> [i32]
+    5  (6.85%) × [i32] -> [i32]
+    5  (6.85%) × [i32, i32, i32] -> []
+    7  (9.59%) × [] -> []
+    7  (9.59%) × [i32] -> []
+    7  (9.59%) × [i32, i32, i32] -> [i32]
+    8 (10.96%) × [i32, i32] -> []
+   16 (21.92%) × [i32, i32] -> [i32]
+
+Functions with at least one call_indirect: 11 (15.07% of all functions)
+
+Table elements initialization:
+         range: [    1,   11]   length:  11   unique funcs:    9   type: [i32, i32] -> [i32]
+         range: [   12,   12]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   13,   13]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [   14,   14]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   15,   15]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   16,   16]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   17,   17]   length:   1   unique funcs:    1   type: [i32, i32, i32, i32] -> []
+         range: [   18,   18]   length:   1   unique funcs:    1   type: [i32, i32] -> [i32]
+         range: [   19,   19]   length:   1   unique funcs:    1   type: [i32] -> [i32]
+         range: [   20,   21]   length:   2   unique funcs:    1   type: [i32] -> []
+         range: [   22,   22]   length:   1   unique funcs:    1   type: [i32] -> [i64]
+         range: [   23,   23]   length:   1   unique funcs:    1   type: [i32] -> []
+         range: [   24,   24]   length:   1   unique funcs:    1   type: [i32] -> [i64]
+  13 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × unrestricted                         source:   i32.load   type [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                5
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+    16 × unrestricted                         source:   i32.load   type [i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               16
+         functions matching by type and present in table (regardless at which table index):   11
+         functions matching by type and present in permissable table index range:             11
+    16 × unrestricted                         source:   i32.load   type [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                7
+         functions matching by type and present in table (regardless at which table index):    0
+         functions matching by type and present in permissable table index range:              0
+     1 × unrestricted                         source:   i32.load   type [i32, i32, i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):                4
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              2
+  4 call_indirect patterns in total
+
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  class #0
+    type: [i32] -> [i32]
+    start idx: None, end idx: None
+    size (of class): 2
+    count (how often class appears): 1
+  class #1
+    type: [i32, i32, i32, i32] -> []
+    start idx: None, end idx: None
+    size (of class): 2
+    count (how often class appears): 1
+  class #2
+    type: [i32, i32] -> [i32]
+    start idx: None, end idx: None
+    size (of class): 11
+    count (how often class appears): 16
+  class #3
+    type: [i32, i32, i32] -> [i32]
+    start idx: None, end idx: None
+    size (of class): 0
+    count (how often class appears): 16
+
+latex CFI table line for this program: squoosh-imagecodecs & C & 111.4\kern.5ptk\kern1pt & 34 & 0.6\% & 73 & 17 & 23.3\% & 15 & 20.5\% & 4 & 1 & 16 & 8.5 \\
+cfi_latex_csv_sum_avg_line:squoosh-imagecodecs,111437,5891,34,73,17,15,4,1,16,8.5,16
+benchmark,binary,class,size,count,source
+cfi_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",0,2,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",1,2,1,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",2,11,16,"i32.load"
+cfi_csv_line:"squoosh-imagecodecs","hqx-rs-8c087e0290bb39f1e090.module.wasm",3,0,16,"i32.load"
+total classes: 4

@@ -1,0 +1,146 @@
+Functions:       164
+  Imported:       14
+  Non-imported:  150
+
+Tables: 1 (should be 1 in Wasm v1)
+  Table entries at init:        20
+  Of those, unique functions:   15 (i.e., at least 9.15% of all functions can be called indirectly, because they are in the [indirect call] table)
+
+Globals:
+  #0 i32
+     import: env.__table_base
+       0 × global.get     0 × global.set     0 total
+  #1 f64
+     import: global.NaN
+       3 × global.get     0 × global.set     3 total (100/0% split)
+  #2 f64
+     import: global.Infinity
+       1 × global.get     0 × global.set     1 total (100/0% split)
+  #3 i32
+     init: i32.const 11984944
+     101 × global.get   152 × global.set   253 total (40/60% split)
+
+Likely the stack pointer:       Global #3
+Functions using stack pointer:   48 (32.00% of all non-imported functions)
+Stack increments: (How many functions increment the stack pointer by how much? Can also handle multiple increments per function, that's why it is an array of increments.)
+    1  (0.67%) × [16, 16]
+    1  (0.67%) × [48]
+    1  (0.67%) × [96]
+    1  (0.67%) × [128]
+    1  (0.67%) × [144]
+    1  (0.67%) × [160]
+    1  (0.67%) × [192]
+    1  (0.67%) × [224]
+    1  (0.67%) × [256]
+    1  (0.67%) × [288]
+    1  (0.67%) × [512]
+    1  (0.67%) × [560]
+    1  (0.67%) × [560, 16]
+    1  (0.67%) × [656]
+    1  (0.67%) × [1120]
+    1  (0.67%) × [1136]
+    1  (0.67%) × [1488]
+    1  (0.67%) × [1936]
+    1  (0.67%) × [2448]
+    1  (0.67%) × [2912]
+    2  (1.33%) × [640]
+    2  (1.33%) × [2080]
+    5  (3.33%) × [32]
+   16 (10.67%) × [16]
+
+Counts of function types (29 unique types):
+    1  (0.61%) × [i32] -> [i64]
+    1  (0.61%) × [i32, i32] -> [f64]
+    1  (0.61%) × [i32, i32, i32, i32] -> [f64]
+    1  (0.61%) × [i32, i32, i32, i32, i32] -> [f64]
+    1  (0.61%) × [i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.61%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> []
+    1  (0.61%) × [i32, i32, i32, i32, i32, i32, i32, i32, i32] -> [i32]
+    1  (0.61%) × [i32, i32, i64] -> []
+    1  (0.61%) × [i32, i64] -> []
+    1  (0.61%) × [i64, i32, i32] -> [i32]
+    2  (1.22%) × [i32, i32, i32, i32, i32] -> []
+    2  (1.22%) × [i32, f64, i32, i32, i32, i32] -> [i32]
+    2  (1.22%) × [i64, i32] -> [i32]
+    2  (1.22%) × [f64, f64] -> [f64]
+    3  (1.83%) × [i32, i32, i32, i32] -> [i32]
+    3  (1.83%) × [i32, i32, i32, i32, i32] -> [i32]
+    3  (1.83%) × [i32, i64, i32] -> [i64]
+    3  (1.83%) × [f64, i32] -> [f64]
+    4  (2.44%) × [i32, i32] -> [i64]
+    4  (2.44%) × [i64] -> [i32]
+    4  (2.44%) × [i64, i32] -> [i64]
+    6  (3.66%) × [] -> [i32]
+   11  (6.71%) × [i32] -> []
+   12  (7.32%) × [i32, i32, i32] -> []
+   15  (9.15%) × [] -> []
+   15  (9.15%) × [i32, i32, i32] -> [i32]
+   16  (9.76%) × [i32, i32] -> []
+   22 (13.41%) × [i32, i32] -> [i32]
+   25 (15.24%) × [i32] -> [i32]
+
+
+Functions with at least one call_indirect: 8 (5.33% of all functions)
+
+Table elements initialization:
+         range: [    0,    3]   length:   4   unique funcs:    3   type: [i32] -> [i32]
+         range: [    4,    5]   length:   2   unique funcs:    2   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         range: [    6,   13]   length:   8   unique funcs:    5   type: [i32, i32, i32] -> [i32]
+         range: [   14,   17]   length:   4   unique funcs:    3   type: [i32, i64, i32] -> [i64]
+         range: [   18,   19]   length:   2   unique funcs:    2   type: [i32, i32] -> []
+  5 table init ranges in total
+
+Patterns (=preceding instructions) of call_indirect:
+     1 × range: [    0,    3]   length:   4   source:   i32.load   type: [i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               25
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × fixed index:      5                  source:  i32.const   type: [i32, f64, i32, i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):                2
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              1
+     3 × range: [    6,   13]   length:   8   source:   i32.load   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               15
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     3 × range: [    6,   13]   length:   8   source:  local.get   type: [i32, i32, i32] -> [i32]
+         functions matching by type (regardless whether they are in the table):               15
+         functions matching by type and present in table (regardless at which table index):    5
+         functions matching by type and present in permissable table index range:              5
+     1 × range: [   14,   17]   length:   4   source:  local.get   type: [i32, i64, i32] -> [i64]
+         functions matching by type (regardless whether they are in the table):                3
+         functions matching by type and present in table (regardless at which table index):    3
+         functions matching by type and present in permissable table index range:              3
+     1 × fixed index:     19                  source:  i32.const   type: [i32, i32] -> []
+         functions matching by type (regardless whether they are in the table):               16
+         functions matching by type and present in table (regardless at which table index):    2
+         functions matching by type and present in permissable table index range:              1
+  6 call_indirect patterns in total
+
+function #106 is indirectly called with a fixed table index
+  global.get 3
+  local.set 21
+  global.get 3
+  ...
+function #105 is indirectly called with a fixed table index
+  local.get 1
+  i32.load align=2
+  i32.const 7
+  ...
+
+call_indirect target equivalence classes (CFI equivalence classes):
+  type: [i32] -> [i32], start idx: Some(0), end idx: Some(3), size (of class): 3, count (how often class appears: 1
+  type: [i32, i64, i32] -> [i64], start idx: Some(14), end idx: Some(17), size (of class): 3, count (how often class appears: 1
+  type: [i32, i32, i32] -> [i32], start idx: Some(6), end idx: Some(13), size (of class): 5, count (how often class appears: 6
+  type: [i32, i32] -> [], start idx: Some(19), end idx: Some(19), size (of class): 1, count (how often class appears: 1
+  type: [i32, f64, i32, i32, i32, i32] -> [i32], start idx: Some(5), end idx: Some(5), size (of class): 1, count (how often class appears: 1
+
+latex CFI table line for this program: C & 49.4k & 780 & 10 & 1.27\% & 164 & 15 & 9.1\% & 8 & 5.3\% & 136 & 40 & 29.4\% & 38 & 27.9\% && 18 & 13.2\%
+
+class;size;count
+0;3;1
+1;3;1
+2;5;6
+3;1;1
+4;1;1
+total classes: 5
